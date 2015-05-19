@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <button onclick="history.back();">后退</button>
+
+  <button onclick="history.forward();">前进</button>
+
+  <!-- 正数前进 负数后退  -->
+  <button onclick="history.go(-3);">后退</button>
+
+  <button onclick="alert(location.href);">显示当前url</button>
+
+  <button onclick="alert(location.host);">显示当前端口号l</button>
+
+
+  <button onclick="location.reload();">刷新页面</button>
+<!-- 括号中 是 需要替换的地址  -->
+<button onclick="location.replace('http://www.baidu.com');">页面替换</button>
+
+</body>
+</html>

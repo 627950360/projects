@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+
+        div{
+            border:1px red solid
+        }
+
+        .kuang{
+
+            width:250px;
+            height:100px;
+            float:left;
+
+        }
+
+        .neirong{
+
+            width:250px;
+            height:100px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function youxi(){
+
+            document.getElementById("youxi2").style.display="block";
+
+            document.getElementById("shouji2").style.display="none";
+        }
+
+
+        function shouji(){
+
+            document.getElementById("shouji2").style.display="block";
+
+            document.getElementById("youxi2").style.display="none";
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div style="width:504px;height:500px;">
+
+    <div class="kuang">
+
+        <input type="button" value="游戏" class="neirong" style="background-color: #2785DA" onmousemove="youxi()"/>
+
+        <div class="neirong"  id="youxi2" style=display:none;> 游戏充值</div>
+
+
+    </div>
+
+    <div class="kuang">
+
+        <input type="button" value="手机" class="neirong" style="background-color:red"  onmousemove="shouji()"/>
+
+        <div class="neirong"  id="shouji2" style=display:none;>
+            手机充值手机充值手机充值手机充值手机充值手机充值手机充值手机充值
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>

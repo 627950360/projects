@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>网易框</title>
+    <link href="../../css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="wangyi.css" rel="stylesheet" type="text/css"/>
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+
+        .caijingtou {
+            width: 35px;
+            height: 74px;
+            margin-left: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #252525;;
+            float: left
+        }
+
+        .caijingnvren {
+            font-size: 13px;
+            color: #252525;
+            display: inline-block;
+            margin-top: 10px;
+
+        }
+
+        .zuopiaoxinwen {
+            margin-left: 10px;
+            color: #252525;
+            font-size: 13px;
+            display: inline-block;
+
+        }
+
+        .zuopiaogupiao {
+            color: #252525;
+            font-size: 13px;
+            display: inline-block;
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+
+        .caijingxinwen {
+            font-size: 10px;
+            float: left;
+            width: 120px;
+            height: 74px;
+            display: inline-block;
+        }
+
+        .xinwen2 {
+            width: 90px;
+        }
+
+        .xianggangwenzi {
+            color: #376A77;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 14px;
+        }
+
+        .XiangGangKuang {
+            width: 150px;
+            height: 174px;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .XiangGangKuang1 {
+            float: left;
+        }
+
+        .ShiPingXiaTuPian {
+            width: 190px;
+            height: 145px;
+            float: left;
+        }
+
+        .ShiPingXiaTuPian1 {
+            width: 155px;
+
+        }
+
+        .anniu2 {
+            width: 20px;
+            height: 57px;
+            background-color: #E6EAED;
+
+        }
+
+        .AnNiu {
+            display: inline-block;
+            margin-top: 11px;
+            color: #376A77;
+            margin-left: 2px;
+        }
+
+        .WanRnnWenZi {
+            color: #376A77;
+            margin-left: 25px;
+        }
+
+        .anniuzhong {
+            color: #252525;
+            margin-left: 35px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .anniuzhong1 {
+            margin-left: 25px;
+        }
+
+        .AnNiuZhongKuang {
+            width: 120px;
+            height: 34px;
+            float: left;
+            background-color: #F4F4F4;
+        }
+
+        .AnNiuZhongKuang1 {
+            float: right;
+            width: 100px;
+        }
+
+        #SuYuNiDeXingWen {
+            height: 35px;
+            width: 100%;
+
+        }
+
+        .PanDian {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 15px;
+            margin-top: 20px;
+            color: #842525;
+            font-weight: bold;
+
+        }
+
+        .PanDian1 {
+            margin-top: 15px;
+            color: #252525;
+            font-weight: 100;
+        }
+
+        .TuPian41 {
+            width: 178px;
+            height: 135px;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .tupiandaxiao {
+            height: 100px;
+            width: 145px;
+        }
+
+        #ZhongJunShi {
+            width: 100%;
+            height: 50px;
+            float: left;
+            border-top: 2px #C1C1C1 dashed;
+        }
+
+        .GeShiPing {
+            width: 169px;
+            height: 155px;
+            float: left;
+        }
+
+        .ShiPingyou {
+            width: 188px;
+            height: 155px;
+            float: left;
+        }
+
+        .ZhiBo {
+            width: 145px;
+            height: 100px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        #KaoLa {
+            display: inline-block;
+            float: left;
+            margin-left: 0px;
+            width: 330px;
+            height: 110px;
+            margin-top: 20px;
+        }
+
+        .WangYiCanPing {
+            width: 100%;
+            float: left;
+        }
+
+        .CanPing1 {
+            height: 70px;
+        }
+
+        .CanPing2 {
+            height: 120px;
+        }
+
+        .CanPing3 {
+            height: 110px;
+        }
+
+        .CanPing4 {
+            height: 120px;
+        }
+
+        .BaoTi {
+            border: 1px solid #DDDDDD;
+        }
+
+        .WenZhi4 {
+            width: 351px;
+            height: 44px;
+            float: left
+        }
+
+        #WenZhi {
+            width: 100%;
+            height: 150px;
+            float: left;
+        }
+
+        #WenZhi1 {
+            width: 100%;
+            height: 310px;
+            float: left;
+        }
+
+        .HuoChePiao {
+            width: 100%;
+            height: 35px;
+            float: left;
+        }
+
+        #HuoChePiao1 {
+            width: 100%;
+            height: 240px;
+            float: left;
+        }
+
+        .NuShen {
+            width: 159px;
+            height: 150px;
+            float: left;
+        }
+
+        .VIP {
+            color: #252525;
+            margin-left: 6px;
+            font-size: 15px;
+        }
+
+        #VIP {
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+
+        #VIP1 {
+            margin-left: 5px;
+            margin-top: 20px;
+        }
+
+        .VIPtou {
+            margin-top: 20px;
+        }
+
+        .VIPzuo {
+            margin-top: 10px;
+        }
+
+        .v1 {
+            font-size: 16px;
+        }
+
+        .tupiankuang img {
+            width: 345px;
+            height: 240px;
+        }
+         #arrorwLeft{
+             width: 30px;
+             height: 30px;
+             top:100px;
+             position: absolute;
+             left: 10px;
+         }
+        #arrorwRight{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 20px;
+            top: 91px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="widthyibai-1">
+
+    <div class="widthyibai1">应用 首页</div>
+
+    <div class="gao"></div>
+
+    <div class="cssjuzong">
+        <div style=";" class="gaozuopiao gaozuopiao1">
+            <img src="../../images/网易/网易头左图片.png">
+        </div>
+        <div class="gaokuan">
+            <div class="gaozuopiao gaozuopiao2">
+                <img src="../../images/网易/今日.jpg">
+            </div>
+            <div style="" class="gaozuopiao gaozuopiao3">
+                <img src="../../images/网易/价值观.png">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="juzhong juzhong1">
+        <div class="xingwen xingwen1">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+            </div>
+        </div>
+
+
+        <div class="xingwen xingwen1">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+            </div>
+        </div>
+        <div class="xingwen xingwen2">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen xinwen2">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+
+            </div>
+        </div>
+        <div class="xingwen xingwen3">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen xinwen2">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+
+            </div>
+        </div>
+        <div class="xingwen xingwen3">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen xinwen2">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+
+            </div>
+        </div>
+        <div class="xingwen4">
+            <div class="caijingtou">
+
+                <a href="#" class="caijingnvren">财经</a>
+                <a href="#" class="caijingnvren">视屏</a>
+                <a href="#" class="caijingnvren">女人</a>
+            </div>
+            <div class="caijingxinwen xinwen2">
+
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+
+                <a href="#" class="zuopiaogupiao">股票</a>
+                <a href="#" class="zuopiaoxinwen">股票</a>
+                <a href="#" class="zuopiaogupiao">股票</a>
+
+
+            </div>
+        </div>
+
+
+    </div>
+x
+    <div class="juzhong jizhong-anniu">
+        <div class="jiaoyu jiaoyu-anniu">
+            <div class="anniukuan">
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">教<br/><br/>育</a>
+                </div>
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">出<br/><br/>国</a>
+                </div>
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">招<br/><br/>生</a>
+                </div>
+            </div>
+            <div class="XiangGangKuang">
+                <a href="#" class="xianggangwenzi"> 香港浸大理学院硕士招生</a>
+                <a href="#" class="xianggangwenzi">汇佳2015秋季入学申请</a>
+                <a href="#" class="xianggangwenzi">这个国际学校有点“牛”</a>
+                <a href="#" class="xianggangwenzi"> 新东方春季班报名入口！</a>
+                <a href="#" class="xianggangwenzi">上海外国语大学MBA招生</a>
+                <a href="#" class="xianggangwenzi"> 新航道推常春藤导师计划</a>
+            </div>
+        </div>
+        <div class="jiaoyu jiaoyu2">
+            <div class="anniuwanren">
+                <a href="#" class="WanRnnWenZi">超万人1元拿走iPhone</a>
+                <a href="#" class="WanRnnWenZi">《态度公开课》开讲啦 500明星汇聚云音乐</a>
+                <a href="#" class="WanRnnWenZi">才23岁就被父母催婚</a>
+                <a href="#" class="WanRnnWenZi">网易地方强势出击</a>
+            </div>
+            <div class="anniuwanren anniuwanren1">
+                <img src="../../images/网易/佛.jpg" style="width: 800px">
+            </div>
+            <div class="dianka">
+                <a href="#" class="WanRnnWenZi">超万人1元拿走iPhone</a>
+                <a href="#" class="WanRnnWenZi">《态度公开课》开讲啦 500明星汇聚云音乐</a>
+                <a href="#" class="WanRnnWenZi">才23岁就被父母催婚</a>
+                <a href="#" class="WanRnnWenZi">网易地方强势出击</a>
+            </div>
+        </div>
+        <div class="jiaoyu jiaoyu-anniu">
+            <div class="anniuyou">
+                <a href="#" class="xianggangwenzi"> 香港浸大理学院硕士招生</a>
+                <a href="#" class="xianggangwenzi">汇佳2015秋季入学申请</a>
+                <a href="#" class="xianggangwenzi">这个国际学校有点“牛”</a>
+                <a href="#" class="xianggangwenzi"> 新东方春季班报名入口！</a>
+                <a href="#" class="xianggangwenzi">上海外国语大学MBA招生</a>
+                <a href="#" class="xianggangwenzi"> 新航道推常春藤导师计划</a>
+
+            </div>
+            <div class="anniuyou anniuyou1">
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">教<br/><br/>育</a>
+                </div>
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">出<br/><br/>国</a>
+                </div>
+                <div class="anniu2">
+                    <a href="#" class="AnNiu">招<br/><br/>生</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="juzhong juzhongkuang">
+
+        <div class="tupianqiche">
+            <div class="tupian">
+                <img id="arrorwLeft" src="../../效果/图片轮换/images/arrorwLeft.png">
+
+                <img id="arrorwRight" src="../../效果/图片轮换/images/arrorwRight.png">
+
+
+                <div class="tupiankuang">
+
+
+                    <img src="../../images/网易/伞.jpg"><img src="../../效果/图片轮换/images/1.jpg"><img src="../../效果/图片轮换/images/2.jpg"><img
+                        src="../../效果/图片轮换/images/4.jpg"><img src="../../效果/图片轮换/images/5.jpg"><img
+                        src="../../效果/图片轮换/images/6.jpg"><img src="../../效果/图片轮换/images/7.jpg"><img
+                        src="../../效果/图片轮换/images/8.jpg"><img src="../../效果/图片轮换/images/9.jpg">
+
+
+                    <script>
+                        var zhang=-($(".tupian img").length-3)*345;
+
+                        $("#arrorwLeft").on("click",function(){
+
+                            if ($(".tupiankuang").is(":animated")) {
+                                return;
+                            }
+                            var yun = parseInt($(".tupiankuang").css("margin-left"));
+
+                            if (yun > zhang) {
+                                yun = yun - 345;
+                            } else {
+                                //返回不执行操作
+                                return;
+                                //返回第一张
+                                yun = 0;
+                            }
+                            $(".tupiankuang").animate({"margin-left": yun}, 345);
+
+                        });
+
+
+                        $("#arrorwRight").on("click",function(){
+
+                           if($(".tupiankuang").is(":animated")){
+                               return;
+                           }
+                           var chao=parseInt($(".tupiankuang").css("margin-left"));
+
+                            if(chao<0){
+                                chao=chao+345;
+                            }else{
+                                return;
+
+                                chao=zhang;
+                            }
+                            $(".tupiankuang").animate({"margin-left":chao},345);
+
+                        });
+
+
+                    </script>
+
+
+
+                    <div class="tupiananniu">--！按钮
+                    </div>
+                </div>
+            </div>
+            <div class="shippingwaikuang">
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">视屏</a></div>
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">咨询 娱乐</a></div>
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">纪时 公开课</a></div>
+            </div>
+            <div class="qiehuan1">
+                <div class="ShiPingXiaTuPian">
+                    <img src="../../images/网易/视屏下图片.jpg">
+
+                    <div>北京女学生遭多人掌掴</div>
+                </div>
+                <div class="ShiPingXiaTuPian ShiPingXiaTuPian1">
+                    <img src="../../images/网易/视屏下图片2.jpg">
+
+                    <div> 俄网民：以侵略为骄傲</div>
+                </div>
+                <div id="WenZhi">
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+
+                </div>
+                <div id="WenZhi1">
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo">
+                        <a href="#" class="VIP"> 曝老人撞坏女子苹果手机 雨天下跪被掌掴</a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+                    <div class="VIPzuo v1">
+                        <a href="#" class="VIP">小沈阳跌落1米舞台 范冰冰李晨京郊买别墅
+                        </a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="qiehuan">222222222222222点击按钮切换</div>
+            <div class="qiehuan">333333333333333点击按钮切换</div>
+
+        </div>
+
+        <div class="xingwenkuang">
+            <div class="shippingwaikuang">
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">新闻</a></div>
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">图片</a></div>
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">军事</a></div>
+            </div>
+            <div class="qiehuan1 kuan">
+                <ul>
+                    <li>
+                        <a href="#" class="PanDian">盘点中美俄印航母特种车辆印最奇葩(图集)</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                    <a href="#" class="PanDian PanDian1">英称解放军借马关条约警告国家腐败将遭国耻</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="PanDian">图集|沙特动用中国火炮 土豪持黄金AK护边</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                    <a href="#" class="PanDian PanDian1">美前中情局长:中东或长期动乱 造就新版图</a></li>
+                </ul>
+                <div class="TuPian41">
+                    <img src="../../images/网易/中1.jpg" class="tupiandaxiao">
+
+                    <div>美军练夜间伞降似幽灵</div>
+                </div>
+                <div class="TuPian41">
+                    <img src="../../images/网易/中2.jpg" class="tupiandaxiao">
+
+                    <div>美军练夜间伞降似幽灵</div>
+                </div>
+                <div class="TuPian41">
+                    <img src="../../images/网易/中3.jpg" class="tupiandaxiao">
+
+                    <div>美军练夜间伞降似幽灵</div>
+                </div>
+                <div class="TuPian41">
+                    <img src="../../images/网易/中4.jpg" class="tupiandaxiao">
+
+                    <div>美军练夜间伞降似幽灵</div>
+                </div>
+                <div id="ZhongJunShi">
+                    进入军事平道
+                </div>
+            </div>
+            <div class="qiehuan">222222222222222点击按钮切换</div>
+            <div class="qiehuan">333333333333333点击按钮切换</div>
+        </div>
+        <div class="wangyi">
+            <div class="wangyikuang">
+                <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">网易产品</a></div>
+                <div id="SuYuNiDeXingWen">
+                    <img src="../../images/网易/图片中右.png" style="width: 197px">
+                </div>
+                <div class="WangYiCanPing CanPing1">
+                    <div id="VIP">
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                    </div>
+
+
+                    <div id="VIP1">
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a>
+                        <a href="#" class="VIP">免费邮</a></div>
+
+                </div>
+                <div class="WangYiCanPing CanPing2">
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                </div>
+                <div class="WangYiCanPing CanPing3">
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                </div>
+                <div class="WangYiCanPing CanPing4">
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                    </div>
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+
+                    </div>
+                    <div class="VIPtou">
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+                        <a href="#" class="VIP">梦幻西游2</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wangyitupian">
+                <img src="../../images/网易/新用户独享.jpg" style="width: 100%">
+            </div>
+            <div class="wenzhi">公益</div>
+            <div class="wenzhi huochepiao">
+                <div class="HuoChePiao"> 网易火车票</div>
+                <div id="HuoChePiao1">
+                    <img src="../../images/网易/贡酒.jpg"
+                         style="width: 310px;height: 220px;margin-left: 5px;margin-top: 5px">
+                </div>
+            </div>
+            <div class="wenzhi baoyou">
+                <img src="../../images/网易/茶叶.jpg" style="width: 330px;height: 275px">
+            </div>
+
+            <div class="wangyizhengping">
+                <div class="HuoChePiao"> 网易海淘正品</div>
+            </div>
+            <div class="siliao">
+                <div class="HuoChePiao"> 网易视频 我是女神</div>
+                <div class="NuShen">
+                    <img src="../../images/网易/女神1.jpg" style="margin-top:20px;margin-left: 15px">
+                </div>
+                <div class="NuShen">
+                    <img src="../../images/网易/女神2.jpg" style="margin-top:20px;margin-left: 15px">
+                </div>
+                <div class="NuShen">
+                    <img src="../../images/网易/女神3.jpg" style="margin-top:20px;margin-left: 15px">
+                </div>
+                <div class="NuShen">
+                    <img src="../../images/网易/女神4.jpg" style="margin-top:20px;margin-left: 15px">
+                </div>
+
+
+            </div>
+            <div class="siliao">
+                <img src="../../images/网易/猕猴桃.jpg/" style="height: 272px;width: 100%;">
+            </div>
+
+
+        </div>
+
+        <div class="zhongkuang">
+            <div class="tupianshipin">
+                <div class="GeShiPing">
+                    <img src="../../images/网易/直播1.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">机智萌妹子</div>
+                </div>
+                <div class="GeShiPing">
+                    <img src="../../images/网易/直播1.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">机智萌妹子</div>
+                </div>
+                <div>
+                    <img src="../../images/网易/考拉海购.gif" id="KaoLa">
+
+
+                </div>
+            </div>
+
+            <div class="tupianshipin wenzianniu">
+                <div class="GeShiPing ShiPingyou">
+                    <img src="../../images/网易/直播2.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">绝对好声音</div>
+                </div>
+                <div class="GeShiPing ShiPingyou">
+                    <img src="../../images/网易/直播2.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">绝对好声音</div>
+                </div>
+                <div class="GeShiPing ShiPingyou">
+                    <img src="../../images/网易/直播2.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">绝对好声音</div>
+                </div>
+                <div class="GeShiPing ShiPingyou">
+                    <img src="../../images/网易/直播2.jpg" class="ZhiBo">
+
+                    <div class="MeiZhi">绝对好声音</div>
+                </div>
+            </div>
+
+            <div class="wenzhibiaoti BaoTi">
+                <div class="WenZhi4">
+                    <div class="CheXing">最直观车型对比工具&nbsp &nbsp 优质单身男女都在这里</div>
+                </div>
+                <div class="WenZhi4">
+                    <div class="CheXing">"梦想之旅"公益讲座 传真总是卡纸怎么办？</div>
+                </div>
+                <div class="WenZhi4">
+                    <div class="CheXing">最直观车型对比工具&nbsp &nbsp 优质单身男女都在这里</div>
+                </div>
+                <div class="WenZhi4">
+                    <div class="CheXing">"梦想之旅"公益讲座 传真总是卡纸怎么办？</div>
+                </div>
+            </div>
+
+            <div class="wenzhibiaoti tupianzhong">
+                <img src="../../images/网易/汽车.png">
+            </div>
+
+            <div class="wenzhibiaoti anniutupian">
+
+                <div class="shippingwaikuang">
+                    <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">视屏</a></div>
+                    <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">咨询 娱乐</a></div>
+                    <div class="AnNiuZhongKuang"><a href="#" class="anniuzhong">纪时 公开课</a></div>
+
+                    <div class="AnNiuZhongKuang AnNiuZhongKuang1"><a href="#" class="anniuzhong anniuzhong1">电视 音乐</a>
+                    </div>
+                    <div class="AnNiuZhongKuang AnNiuZhongKuang1"><a href="#" class="anniuzhong anniuzhong1">电影</a>
+                    </div>
+                    <div class="AnNiuZhongKuang AnNiuZhongKuang1"><a href="#" class="anniuzhong anniuzhong1">娱乐</a>
+                    </div>
+                </div>
+                <div id="ShiPingKuang">切换文字图片111111111111111</div>
+
+                <div id="ShiPingKuang1">切换文字图片22222222222222222</div>
+
+            </div>
+
+
+        </div>
+
+        <div class="wenzhibiaoti yili">
+            <img src="../../images/网易/苏宁易购中.png">
+        </div>
+
+        <div class="wenzhibiaoti xingwenzhong">按钮新闻</div>
+
+        <div class="zhutupian">
+            <img src="../../images/网易/主图片.jpg" style="width:100%">
+        </div>
+
+    </div>
+
+    <div class="dibian">
+        <div id="Di">
+            <div class="DiXiaWenZi">
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+
+            </div>
+            <div class="DiXiaWenZi">
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+
+            </div>
+            <div class="DiXiaWenZi">
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+
+            </div>
+            <div class="DiXiaWenZi">
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+                <a href="#" class="DiWenZiYangShi">ICP证粤B2-20090191</a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="dixia">
+        <div class="diwenzi"> © 1997-2015 网易公司版权所有 About NetEase | 公司简介 | 联系方法
+            | 招聘信息 | 客户服务 | 隐私政策 | 广告服务 | 网站地图 | 意见反馈 | 不良信息举报
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

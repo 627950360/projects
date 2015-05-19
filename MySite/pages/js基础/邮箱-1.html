@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+
+
+        function ckEmail(){
+
+            var email=document.getElementById("email").value;
+            if(email.length<=0){
+                alert("请输入电子邮件！");
+                return false;
+            }
+                          }
+
+    </script>
+</head>
+<body>
+    <form name="myForm" action="注册成功.html" method="post" onsubmit="return ckEmail();">
+    <table style="border:1px solid">
+        <tr>
+            <td>E-mail:</td>
+            <td><input id="email"></td>
+
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input id="mima"></td>
+
+        </tr>
+        <tr>
+            <td>重复密码：</td>
+            <td><input id="chongfu"></td>
+
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">提交</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

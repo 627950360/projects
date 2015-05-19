@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<!--   相对和绝对定位支持IE6 浮动定位最低支持IE7 --->
+<!-- 相对定位 -->
+
+<!--  如果要z-index有效，那么必须设置positoin  如果默认 不写z-index 则根据顺序增加  初始值都是:0  -->
+<div style="background-color: red;width:200px;
+height: 200px;z-index: 3;position: relative;">1111111111</div>
+
+<div style="background-color: #000000;width:200px;
+height: 200px;; position: relative; top:-200px;left:20px;z-index: 2; ">2222222222</div>
+
+<div style="background-color: red;width:200px;
+height: 200px;position: relative;top:-200px;left:20px; ">3333333333333333333</div>
+
+
+<!-- 绝对定位 -->
+<div style="background-color: red;width:200px;height: 200px;position:absolute; top:20px;right:0px;">1111111</div>
+<div style="background-color: red;width:200px;height: 200px;position: absolute; top:20px;right:0px;">22222222</div>
+
+
+<!-- 浮动定位 -->
+<div style="background-color: red;width:200px;height: 200px;position: fixed; bottom:0px;right:0px;">666666666666</div>
+<div style="background-color: red;width:200px;height: 200px;position: fixed; bottom:400px;right:300px;">55555555555</div>
+
+
+
+<div style="height: 1000px;;">
+    
+</div>
+</body>
+</html>

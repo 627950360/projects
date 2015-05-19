@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery/jquery-1.11.2.min.js"></script>
+
+    <style>
+        ul, li {
+            list-style: none
+        }
+
+        #items ul {
+            display: none;
+        }
+
+        .Kai {
+            display: block
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div id="items">
+    <div>
+        <li class="title">菜单一</li>
+        <ul class="Kai">
+            <li class="Kai">
+                菜单一1
+            </li>
+            <li>菜单一2</li>
+            <li>菜单一3</li>
+        </ul>
+    </div>
+    <div>
+        <li class="title">菜单一</li>
+        <ul class="Kai">
+            <li class="Kai">菜单一1</li>
+            <li>菜单一2</li>
+            <li>菜单一3</li>
+        </ul>
+    </div>
+    <div>
+        <li class="title">菜单一</li>
+        <ul class="Kai">
+            <li class="Kai">菜单一1</li>
+            <li>菜单一2</li>
+            <li>菜单一3</li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+<script>
+    $("#items .title").click(function () {
+        $(this).parent().find("ul").slideToggle();
+    })
+</script>
+</html>

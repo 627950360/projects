@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        function huanying() {
+
+            var zhang = document.getElementById("zhi").value;
+
+            for (i = 0; i < zhang; i++)
+
+                document.write("<H1>欢迎点击</H1>");
+
+        }
+
+
+        function kaishi(op) {
+            var num1, num2;
+            num1 = parseFloat(document.myForm.diyi.value);
+            num2 = parseFloat(document.myForm.dier.value);
+            if (op == "+")
+                document.myForm.jieguo.value = num1 + num2;
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<div>
+    输入次数
+    <input id="zhi">
+
+    <input type="button" value="计算结果" onclick="huanying()">
+
+
+</div>
+
+
+计算机
+<form name="myForm" action="">
+    <table>
+        <tr>
+            <td> 第一个数：<input name="diyi"></td>
+
+
+            <td> 第二个数：<input name="dier"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="kaishi('+')">加+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> 计算结果：<input name="jieguo"></td>
+        </tr>
+
+    </table>
+</form>
+
+
+<script type="text/javascript">
+
+    document.write("<br/>");
+
+    for (var a = 0; a < 6; a++) {
+
+        document.write("<br/>");
+
+        for (var f = a; f < 6; f++) {
+            document.write("&nbsp;");
+        }
+
+        for (var q = a; q > 0; q--) {
+            document.write(".&nbsp;");
+        }
+    }
+
+    //document.write();
+    for (var i = 6; i > 0; i--) {
+        document.write("<br/>");
+
+        for (var j = i; j < 6; j++) {
+            document.write("&nbsp;");
+        }
+
+        for (var k = i; k > 0; k--) {
+            document.write(".&nbsp;");
+        }
+    }
+
+    document.write("<br/><br/><br/>");
+
+    var i, j, k;
+    //打印前4行的空格和*
+    for (i = 0; i <= 3; i++) {
+
+        //i=0  for (j = 0; j <= 2; j++)  ====>3
+        //i=1  for (j = 0; j <= 1; j++)  ====>2
+        //i=2  for (j = 0; j <= 0; j++)  ====>1
+        //i=3  for (j = 0; j <= -1; j++) ====>0
+        for (j = 0; j <= 2 - i; j++) {
+            document.write("&nbsp;");
+        }
+
+        //i=0   for (k = 0; k <= 0; k++)  ====》1
+        //i=1   for (k = 0; k <= 2; k++)  ====> 3
+        //i=2   for (k = 0; k <= 4; k++)  ====> 5
+        //i=3   for (k = 0; k <= 6; k++)  ====> 7
+        for (k = 0; k <= 2 * i; k++) {
+            document.write("* ");
+        }
+        document.write("<br/>");
+    }
+    //打印后3行的空格     和*
+    for (i = 0; i <= 2; i++) {
+        for (j = 0; j <= i; j++) {
+            document.write("&nbsp;");
+        }
+        for (k = 0; k <= 4 - 2 * i; k++) {
+            document.write("* ");
+        }
+        document.write("<br/>");
+    }
+
+    var m = 1, b = 2;
+    document.write(m + "×" + b + " = " + m * b);
+
+
+</script>
+
+
+</body>
+</html>

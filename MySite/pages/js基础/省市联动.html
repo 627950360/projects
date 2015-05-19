@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        function changeCity(){
+            //获取改变省份的值
+            var proText=document.myForm.selProvince.value;
+            //清除城市下拉中的值
+            document.myForm.selCity.options.length=0;
+
+            //如果会是上海
+            if(proText=="上海"){
+                //新建（实例化）一个城市
+                var opt=new Option("上海","shanghai");
+                //将城市添加到城市下拉中
+                document.myForm.selCity.options.add(opt);
+            }
+            if(proText=="江苏"){
+                var opt=new Option("苏州","suzhou");
+                var opt2=new Option("淮安","huaian");
+                document.myForm.selCity.options.add(opt);
+                document.myForm.selCity.options.add(opt2);
+            }
+
+            if(proText=="安徽"){
+                var opt=new Option("阜阳","fuyang");
+                document.myForm.selCity.options.add(opt);
+            }
+
+        }
+
+
+        function changeXian(){
+            //获取改变省份的值
+            var proText=document.myForm.selCity.value;
+            //清除城市下拉中的值
+            document.myForm.selXian.options.length=0;
+            //如果会死上海
+            if(proText=="huaian"){
+                //新建（实例化）一个城市
+                var opt=new Option("淮阴","huaiyin");
+                //将城市添加到城市下拉中
+                document.myForm.selXian.options.add(opt);
+            }
+
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<form name="myForm">
+    <!--变选项的时候触发   alert显示的意思-->
+    <table>
+        <tr>
+            <td>
+                省份
+            </td>
+
+            <td>
+                <select name="selProvince" onchange="changeCity();">
+                    <option>上海</option>
+                    <option>江苏</option>
+                    <option>安徽</option>
+                </select>
+            </td>
+
+        </tr>
+
+        <tr>
+            <Td>
+                城市
+            </Td>
+
+            <td>
+                <select name="selCity" onchange="changeXian();">
+
+                </select>
+
+            </td>
+        </tr>
+
+        <tr>
+            <Td>
+                县
+            </Td>
+
+            <td>
+                <select name="selXian">
+
+                </select>
+
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

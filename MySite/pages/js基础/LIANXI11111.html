@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .border {
+            border: solid 1px red;
+            margin-left: 5px;
+            width: 50px;
+            display: inline-block
+        }
+
+    </style>
+    <script type="application/javascript">
+        function fun1() {
+            var ele = document.getElementById("myId");//获取input标签对象  并且赋给ele变量
+            ele.style.backgroundColor = "red";//设置input标签背景色为红色
+            var val = ele.value;//获取input标签的值
+            alert(val);//弹出【input标签的值】提示框
+        }
+
+        function fun2() {
+            var group = document.getElementsByName("byName");//获取input标签对象数组 并赋给span
+            var count = group.length;
+            alert(count);    // 弹出提示框
+            for (var zhang = 0; zhang < 12; zhang++) {   //如果i等于0  那么i小于12的时候每次都加1  一直加到12结束
+
+                group[zhang].style.backgroundColor = "red";//设置input标签背景色为红色
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+
+
+<hr />
+
+<div class="border" id="div1" onmouseover="this.style.border='outset 10px red'"  onmouseout="this.style.border='solid 1px red'">鼠标移上去试试</div>
+
+<hr />
+
+<span class="border" name="byName">1</span>
+<span class="border" name="byName">2</span>
+<span class="border" name="byName">3</span>
+<span class="border" name="byName">1</span>
+<span class="border" name="byName">2</span>
+<span class="border" name="byName">3</span>
+<span class="border" name="byName">1</span>
+<span class="border" name="byName">2</span>
+<span class="border" name="byName">3</span>
+<span class="border" name="byName">1</span>
+<span class="border" name="byName">2</span>
+<span class="border" name="byName">3</span>
+<input type="button" onclick="fun2()" value="点击变色"/> //点击事件 名字fun2
+
+
+<hr/>
+
+<input type="text" id="myId" value="123"/>
+
+
+<input type="button" onclick="fun1()" value="获取值"/>
+
+
+
+</body>
+</html>

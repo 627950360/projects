@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    for (q = 0; q <= 3; q++) {
+        document.write("<br/>");
+
+
+        for (j = 0; j <= 2 - q; j++) {
+            document.write("&nbsp;");
+        }
+
+        for (k = 0; k <= 2 * q; k++) {
+            document.write("* ");
+        }
+
+    }
+    //0 1 2 3 4 5
+    for (a = 0; a <= 2; a++) {
+
+        document.write("<br/>");
+
+        for (m = 0; m <= a; m++) {
+
+            document.write("&nbsp;")
+        }
+
+        for (s = 0; s <= 4 - 2 * a; s++) {
+
+            document.write("* ");
+        }
+    }
+
+    document.write("<br/>");
+    //123456
+    for (i = 1; i <= 9; i++) {
+        //1234567
+        for (j = 1; j <= i; j++) {
+            document.write(j + "×" + i + "=" + i * j + " &nbsp; ");
+        }
+        document.write("<br/>");
+    }
+
+</script>
+
+
+</body>
+</html>

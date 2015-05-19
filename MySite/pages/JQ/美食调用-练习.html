@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+    <script>
+
+
+        $(function () {
+            search();
+            $("#anNiu").click(function () {
+                search();
+            });
+        });
+
+
+        function search() {
+            var textt = $("#shuRuKuang").val();
+            textt = $.trim(textt);
+            if (textt == "") {
+                alert("亲!!!请输入您要搜索的菜谱名称哦！");
+                return;
+            }
+            var url = "http://apis.juhe.cn/cook/query?key=96e775c1dc09f7324d6bb4d01f18b08a&menu=" + textt + "&rn=30&pn=0";
+
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    $("#kuang").html("");
+                    var kuang = data.result.data;
+                    $.each(kuang, function (index, item) {
+
+                        var itemHrml = '<div class="tuPian"><img  src="' + item.albums[0] + '"/><span class="title">"' + item.title + '"</span><span class="tag">"' + item.tags + '"</span></div>';
+
+                        $("#kuang").append(itemHrml);
+                    })
+
+                }
+            })
+
+        }
+
+    </script>
+    <style type="text/css">
+
+        div {
+
+            width: 250px;
+            margin: auto
+        }
+
+        #shouSuo {
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+
+        #kuang {
+            width: 1008px;
+            height: 1000px
+        }
+
+        #kuang .tuPian {
+            float: left
+        }
+
+        #kuang .tuPian img {
+            margin: 10px
+        }
+
+        #kuang .title {
+            text-align: center;
+            margin: 5px;
+            display: block
+        }
+
+        #kuang .tag {
+            display: block;
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-left: 20px;
+            margin-bottom: 10px
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="shouSuo">
+    <input id="shuRuKuang" value="红烧肉"/><input type="button" value="搜索" id="anNiu">
+</div>
+
+<div id="kuang">
+
+    <div class="tuPian">
+        <img src="http://img.juhe.cn/cookbook/t/1/307_874685.jpg"/>
+        <span class="title">牛肉牛肉牛肉牛肉牛肉</span>
+        <span class="tag">家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 </span>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

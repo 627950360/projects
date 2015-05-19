@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+
+    <style type="text/css">
+
+        #center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 300px;
+            margin-top: -150px;
+            margin-left: -250px;
+        }
+
+        #box {
+            width: 500px;
+            height: 300px;
+            border: 1px #ccc solid;
+            overflow: hidden; /* 超出内容隐藏  */
+        }
+
+        #contentBox {
+            width: 4100px;
+            height: 300px;
+        }
+
+        #contentBox img {
+            width: 500px;
+            height: 300px;
+        }
+
+        #box .arrorwLeft, #box .arrorwRight {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 117px;
+            cursor: pointer;
+            left: 10px;
+        }
+
+        #box .arrorwRight {
+            right: 10px;
+            left: auto;
+        }
+
+        #miniShow{
+
+            position: absolute;
+            right:20px;bottom:20px;width:338px;border:0px red solid;height: 30px;
+
+        }
+
+        #miniShow ul{list-style-type: none;}
+        #miniShow ul li{float: left; width:30px;height: 5px;border:1px #010101 solid;margin-right: 5px;background-color: red}
+        #miniShow ul li.selected{background: #000000;}
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="center">
+
+
+    <div id="box">
+
+        <div id="contentBox">
+            <img src="images/1.jpg"><img src="images/2.jpg"><img src="images/4.jpg"><img src="images/5.jpg"><img
+                src="images/6.jpg"><img src="images/7.jpg"><img src="images/8.jpg"><img src="images/9.jpg">
+
+        </div>
+        <img class="arrorwLeft" src="./images/arrorwLeft.png">
+
+        <img class="arrorwRight" src="./images/arrorwRight.png">
+
+
+        <div id="miniShow">
+
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+
+    var minMLeft = -($("#contentBox img").length - 1) * 500;
+
+
+    //加点击事件
+    $("#box .arrorwLeft").on({
+            click:function(){
+            autoPlay();
+        },
+
+        mouseover:function(){
+            clearInterval(timer);
+        }
+    } );
+
+
+    $(" #box .arrorwRight").on("click", function () {
+
+        //如果真正执行动画就返回
+        if ($("#contentBox").is(":animated")) {
+            return;
+        }
+        //字符串
+        var zhang = parseInt($("#contentBox").css("margin-left"));
+
+        if (zhang < 0) {
+
+            zhang = zhang + 500;
+
+        } else {
+            //返回不执行操作
+            return;
+            //返回最后一张
+            zhang = minMLeft;
+        }
+        syncPic(zhang);
+        //执行动画
+        $("#contentBox").animate({"margin-left": zhang}, 500);
+
+    });
+
+    //清除计时器  左右按钮 及小方块时
+    $(" #box .arrorwRight,#miniShow").on("mouseover",function(){
+        clearInterval(timer);
+    });
+
+     $("#contentBox").on({
+         mouseover:function(){
+             //移除计时器
+             clearInterval(timer);
+         },
+         mouseout:function(){
+//当鼠标离开的时候 再次启动计时器
+             timer= setInterval(function(){
+                 autoPlay();
+             },500);
+
+         }
+
+
+
+     });
+
+    //声明一个计时器
+    var timer;
+
+    function autoPlay(){
+
+        //如果真正执行动画就返回
+        if ($("#contentBox").is(":animated")) {
+            return;
+        }
+        //转换成整数
+        var mLeft = parseInt($("#contentBox").css("margin-left"));
+
+        if (mLeft > minMLeft) {
+            mLeft = mLeft - 500;
+        } else {
+            //返回第一张
+            mLeft = 0;
+        }
+        syncPic(mLeft);
+        $("#contentBox").animate({"margin-left": mLeft}, 500);
+        //执行动画
+    }
+
+    //计时执行 500 毫秒
+    timer= setInterval(function(){
+     autoPlay();
+ },500);
+
+
+    $("#miniShow ul li").on("mouseover",function(){
+
+        //如果真正执行动画就返回
+        if ($("#contentBox").is(":animated")) {
+            return;
+        }
+
+        var _this=$(this);
+        _this.addClass("selected").siblings().removeClass("selected");
+
+        var index=_this.index();
+
+        var mLeft=index*-500;
+
+        $("#contentBox").animate({"margin-left": mLeft}, 500);
+    });
+
+    //同步下面小方块
+    function syncPic(mLeft){
+//找到 当前 显示的图片索引
+        var index=mLeft/-500;
+        //下面的小方块 第几个 加上颜色 其他的 去除颜色
+        $("#miniShow ul li").eq(index).addClass("selected").siblings().removeClass('selected');
+
+    }
+
+
+</script>
+
+</body>
+</html>

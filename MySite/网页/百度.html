@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <style type="text/css">
+
+        div {
+            border: 1px #fff solid;
+        }
+
+        #tou {
+            width: 1350px height : 40 px;
+        }
+
+        #shousuo {
+            width: 700px;
+            height: 200px;
+            margin: auto;
+            margin-top: 38px;
+        }
+
+        #di {
+            width: 350px;
+            height: 45px;
+            margin: auto;
+            margin-top: 250px;
+        }
+
+        .xinwen {
+            color: #000000;
+            font-size: 13px;
+            float: right;
+            margin-top: 14px;
+            margin-right: 22px;
+            font-weight: bold;
+        }
+
+        .xinwen2 {
+            color: #000000;
+            font-size: 13px;
+            float: right;
+            margin-top: 14px;
+            margin-right: 22px;
+
+        }
+
+        .xinwen1 {
+            width: 56px;
+            height: 20px;
+            float: right;
+            margin-top: 10px;
+            margin-right: 3px;
+            font-size: 13px;
+            background-color: #3388FF;
+            padding-top: 4px;
+            padding-left: 4px;
+            color: #fff;
+            z-index: 1;
+            position: relative;
+        }
+
+        .tupian {
+            width: 270px;
+            height: 130px;
+            margin-left: 215px;
+
+        }
+
+        #surukuang {
+            width: 535px;
+            height: 30px;
+            margin-top: 22px;
+            margin-left: 30px;
+            float: left;
+            padding-left: 5px;;
+        }
+
+        #anniu {
+            width: 100px;
+            height: 37px;
+            color: #D7E3C6;
+            float: left;
+            margin-top: 21px;
+            background-color: #3385FF;
+            font-size: 15px;
+        }
+
+        .wenzi {
+            width: 100px;
+            height: 20px;
+            font-size: 1px;
+            margin-right: 10px;
+        }
+
+        #wenzi1 {
+            font-size: 13px;
+            margin-top: 10px;
+            margin-left: 10px;
+            color: #666666;
+        }
+
+        #piaofu {
+            width: 85px;
+            border: 1px solid #CCCCCC;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom:0px;
+            display: none;
+
+        }
+
+        .contentBox{
+            overflow-y: auto;
+            position: absolute;
+            top: 60px;
+            bottom: 0px;
+        }
+
+        .xinwen1 {
+            text-decoration: none;
+        }
+
+        .xinwen1:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .nuomibg {
+            background-image: url("../images/百度注册/genduotupian.png");
+            display: inline-block;
+            margin-left: 26px;
+            width: 35px;
+            height: 40px;
+        }
+
+        .know{background-position-x: 36px;}
+        .know1{background-position-x: 72px;}
+        .know2{background-position-x: 108px;}
+        .know3{background-position-x: 144px;}
+        .know4{background-position-x: 180px;}
+        .know5{background-position-x: 216px;}
+        .know6{background-position-x: 252px;}
+        .know7{background-position-x: 288px;}
+
+        .wenzi0 {
+            font-size: 13px;
+            color: #000000;
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .shuipingxian {
+            margin-top: 50px;
+            border: 0;;
+            border-top: 1px solid #f0f0f0;
+
+        }
+        /*   滚动条样式重写        */
+
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+        ::-webkit-scrollbar
+        {
+            width: 8px;
+            height: 8px;
+            background-color: #F5F5F5;
+        }
+
+        /*定义滚动条轨道 内阴影+圆角*/
+        ::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 0px;
+            background-color: #F5F5F5;
+        }
+
+        /*定义滑块 内阴影+圆角*/
+        ::-webkit-scrollbar-thumb
+        {
+            border-radius: 0px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #797E85;
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+
+        function xianshigenduo() {
+
+            document.getElementById("piaofu").style.display = "block";
+
+        }
+
+        function yingchanggenduo() {
+
+            document.getElementById("piaofu").style.display = "none";
+        }
+
+        function xianshigenduo1() {
+
+            document.getElementById("piaofu").style.display = "block";
+
+        }
+
+        function yingchanggenduo1() {
+
+            document.getElementById("piaofu").style.display = "none";
+        }
+
+        function searchBybaidu(){
+            var url="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd="+document.getElementById("surukuang").value;
+            window.open(url);
+
+        }
+    </script>
+
+</head>
+<body>
+
+<div id="tou">
+
+    <a href="#" class="xinwen1" onmouseover="xianshigenduo();" onmouseout="yingchanggenduo()">
+        更多产品
+    </a>
+
+    <div id="piaofu" onmouseover="xianshigenduo1()" onmouseout="yingchanggenduo1()">
+        <hr class="shuipingxian">
+
+
+        <div class="contentBox">
+
+        <a href="#">
+            <div class="nuomibg"></div>
+            <a href="#" class="wenzi0">糯米</a>
+        </a>
+
+
+        <hr class="shuipingxian">
+        <a href="#">
+            <div class="nuomibg know5"></div>
+            <a href="#" class="wenzi0">知道</a>
+        </a>
+
+
+            <hr class="shuipingxian">
+            <a href="#">
+                <div class="nuomibg know4"></div>
+                <a href="#" class="wenzi0">音乐</a>
+                </a>
+
+
+                <hr class="shuipingxian">
+                <a href="#">
+                    <div class="nuomibg know3"></div>
+                    <a href="#" class="wenzi0">图片</a>
+                    </a>
+
+
+                    <hr class="shuipingxian">
+                    <a href="#">
+                        <div class="nuomibg know2"></div>
+                        <a href="#" class="wenzi0">文库</a>
+                        </a>
+
+
+                        <hr class="shuipingxian">
+                        <a href="#">
+                            <div class="nuomibg know1"></div>
+                            <a href="#" class="wenzi0">风云榜</a>
+                        </a>
+
+
+                            <hr class="shuipingxian">
+                            <a href="#">
+                                <div class="nuomibg  know7"></div>
+                                <a href="#" class="wenzi0">百度推广</a>
+                                </a>
+                                <div></div>
+        </div>
+
+    </div>
+
+    <a href="#" class="xinwen2">设置</a>
+    <a href="#" class="xinwen2">登录</a>
+    <a href="#" class="xinwen">贴吧</a>
+    <a href="#" class="xinwen">视频</a>
+    <a href="#" class="xinwen">地图</a>
+    <a href="#" class="xinwen">hao123</a>
+    <a href="#" class="xinwen">新闻</a>
+
+
+</div>
+
+<div id="shousuo">
+
+
+    <img src="../images/百度注册/bd_logo1.png" class="tupian">
+
+    <input id="surukuang">
+    <input type="button" onclick="searchBybaidu();" value="百度一下" id="anniu">
+</div>
+<div id="di">
+    <a href="#" class="wenzi" style="margin-left: 55px">把百度设为主页</a>
+    <a href="#" class="wenzi">关于百度</a>
+    <a href="#" class="wenzi">About Baidu</a>
+
+    <div id="wenzi1">©2015 Baidu 使用百度前必读 意见反馈 京ICP证030173号</div>
+</div>
+
+
+</body>
+</html>

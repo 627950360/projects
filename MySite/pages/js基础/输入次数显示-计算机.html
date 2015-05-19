@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        function dianji() {
+
+            var count = document.getElementById('xianshi').value;
+            for (i = 0; i < count; i++)
+                document.write("<h2>欢迎光临</h2>");
+
+
+        }
+
+
+
+
+
+        function kaishi(op) {
+            var num1, num2;
+            num1 = parseFloat(document.myForm.diyige.value);
+            num2 = parseFloat(document.myForm.dierge.value);
+            if (op == "+")
+                document.myForm.jieguo.value = num1 + num2;
+
+
+return false;
+
+            //document.myForm.jieguo.value = num1 / num2;
+        }
+
+    </script>
+</head>
+<body>
+
+
+计算机
+<form name="myForm"  action="">
+    <table>
+        <tr>
+            <td> 第一个数：<input name="diyige"></td>
+
+
+            <td> 第二个数：<input name="dierge"></td>
+        </tr>
+        <tr>
+            <td>
+                <!--  buttom  submit(默认) reset   --->
+                <button type="button" onclick="kaishi('+')">加+</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td> 计算结果：<input name="jieguo"></td>
+        </tr>
+
+    </table>
+</form>
+
+
+<br><br> <br><br>
+<br><br> <br><br>
+
+<div>
+    输入数字的次数：
+    <input id="xianshi">
+</div>
+<input type="submit" onclick="dianji()" value="显示  欢迎光临">
+
+
+<script type="text/javascript">
+    document.write("<br/>");
+    for(var i=6;i>0;i--) {
+        document.write("<br/>");
+
+        for (var j = i; j < 6; j++) {
+            document.write("&nbsp;");
+
+        }
+
+        for (var k = i; k > 0; k--) {
+
+            document.write(".&nbsp;");
+        }
+
+    }
+
+       for(var a=10;a>1;a--);{
+
+        document.write(a);
+        document.write("<br/>");
+        for(var e=a;e<10;e++){
+            document.write("<br/>");
+            document.write(e)
+        }
+                   }
+
+
+
+</script>
+
+
+</body>
+</html>

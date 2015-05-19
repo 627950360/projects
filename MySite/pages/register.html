@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新用户注册</title>
+
+    <style type="text/css">
+
+        /*初始化页面标签的内边距、外边距*/
+        html, body,* {
+            padding: 0px;
+            margin: 0px
+        }
+
+        /*最大层的样式*/
+        #main {
+            border: solid 1px red;/*最大层的边框设置为：实线、1px、红色*/
+            width: 1005px; /*宽度*/
+            margin: auto; /*最大的层居中*/
+        }
+
+        /*三个层（上中下）的边框设置为：实线、1px、红色 ， 上外边距为5px */
+        .divBorder {
+            border: solid 1px red;
+            margin-top: 5px
+        }
+
+        /*设置中间部分三个主要层显示方式为：行内块级，并且设置边框*/
+        .content_c {
+            display: inline-block;
+            border: dashed 1px blue
+        }
+
+        /*设置中间部分三个主要层左右两边层的宽*/
+        #content_left, #content_right {
+            width: 317px
+        }
+
+        /*设置中间部分三个主要层中间层的宽*/
+        #content_center {
+            width: 312px
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div id="main" >
+
+    <div id="top" class="divBorder" style="">头部</div>
+
+    <div id="content" class="divBorder">
+        <div id="content_left" class="content_c">左边</div>
+        <div id="content_center" class="content_c">中间</div>
+        <div id="content_right" class="content_c">右边</div>
+    </div>
+
+    <div id="bottom" class="divBorder">底部</div>
+
+</div>
+
+
+</body>
+</html>

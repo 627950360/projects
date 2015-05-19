@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JS练习</title>
+    <style type="text/css">
+        div {
+            border: 5px solid red
+        }
+    </style>
+
+    <script type="application/javascript">
+
+        //定义三个全局变量（四个函数内都可访问），存储第一个数字、第二个数字、运算符
+        var first = undefined;//第一个数字
+        var second = undefined;//第二个数字
+        var operator = undefined;//运算符
+
+        //点击0--9
+        function inputFn(input) {
+            //为第一个数字变量 或者 第二个数字变量 赋值
+            if (first == undefined) {
+                first = input;
+            }
+            else if (second == undefined) {
+                second = input;
+            }
+
+            //计算器显示点击的数字
+            //判断只有第一个数字有值
+            if (first != undefined && second == undefined && operator == undefined) {
+                document.getElementById("txtResult").value = first;
+            }
+
+            //都有值
+            if (first != undefined && second != undefined && operator != undefined) {
+                document.getElementById("txtResult").value = first + operator + second;
+            }
+
+        }
+        //点击 + - * /
+        function inputOp(input) {
+
+            operator = input;
+
+            //判断第一个数字和运算符有值（第二个数字无值）
+            document.getElementById("txtResult").value = first + operator;
+
+
+        }
+        //点击C ,清空计算器
+        function inputC() {
+            //清空计算器显示屏
+            document.getElementById("txtResult").value = "";
+            //清空三个变量值
+            first = undefined;
+            second = undefined;
+            operator = undefined;
+        }
+        //点击=  计算结果
+        function count(input) {
+            if (operator == "+") {
+                var r = first + second;
+                var c = first + operator + second + "=" + r;
+                document.getElementById("txtResult").value = c;
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+<div style="width: 395px;height: 80px;margin-left: 400px;margin-top: 50px ;border:20px red solid ;
+                  background-color: #4FC964"><h1>我的计算器</h1></div>
+<div style="width: 425px;height: 505px;margin-left: 400px">
+
+    <input style="width:420px;height: 100px;font-size: 100px" type="text" id="txtResult"/>
+    <input type="button" style="width:100px;height: 100px" value="1" onclick="inputFn(1)"/>
+    <input type="button" style="width:100px;height: 100px" value="2" onclick="inputFn(2)"/>
+    <input type="button" style="width:100px;height: 100px" value="3" onclick="inputFn(3)"/>
+    <input type="button" style="width:100px;height: 100px" value="+" onclick="inputOp('+')"/>
+    <input type="button" style="width:100px;height: 100px" value="4" onclick="inputFn(4)"/>
+    <input type="button" style="width:100px;height: 100px" value="5" onclick="inputFn(5)"/>
+    <input type="button" style="width:100px;height: 100px" value="6" onclick="inputFn(6)"/>
+    <input type="button" style="width:100px;height: 100px" value="-" onclick="inputOp('-')"/>
+    <input type="button" style="width:100px;height: 100px" value="7" onclick="inputFn(7)"/>
+    <input type="button" style="width:100px;height: 100px" value="8" onclick="inputFn(8)"/>
+    <input type="button" style="width:100px;height: 100px" value="9" onclick="inputFn(9)"/>
+    <input type="button" style="width:100px;height: 100px" value="*" onclick="inputOp('*')"/>
+    <input type="button" style="width:100px;height: 100px" value="0" onclick="inputFn(0)"/>
+    <input type="button" style="width:100px;height: 100px" value="C" onclick="inputC()"/>
+    <input type="button" style="width:100px;height: 100px" value="=" onclick="count()"/>
+    <input type="button" style="width:100px;height: 100px" value="/" onclick="inputOp('/')"/>
+</div>
+
+
+
+</body>
+</html>

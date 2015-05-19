@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js" type="application/javascript"></script>
+    <style>
+        .div{height:500px;width:300px;border:1px solid red;margin-bottom:10px;float:left;margin-right:10px;}
+        button{height:30px;width:100px;}
+    </style>
+</head>
+<body>
+<div class="div div1">
+1
+</div>
+<div class="div div2">
+2
+</div>
+<form id="form">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button type="submit">表单提交</button>
+</form>
+
+<input type="checkbox" id="chk">
+<button class="btn">按钮</button>
+<script>
+    $(function(){
+
+        $("#form").submit(function(){ // 表单提交事件
+            alert("表单正在提交");
+        });
+
+        $(".btn").one("click",function(){   // click  点击事件
+            alert("只触发一次")
+        });
+
+        $(".div1").mouseover(function(){  // mouseover 鼠标移入事件
+          //  $(this).css({"background":"red"});
+        });
+
+        $(".div1").mouseout(function(){    // mouseout  鼠标移开事件
+          //  $(this).css({"background":"green"})
+        });
+
+        $(".div1").mousemove(function(){  // mousemove 鼠标正在移动事件
+         //   $(this).css({"background":"orange"})
+        });
+
+        $(".div1").hover(function(){   // 鼠标移进移出
+            $(this).css({"background":"red"}); // 移上去
+        },function(){
+            $(this).css({"background":"green"});   // 移开
+        })
+
+        $("input").blur(function(){ // 失去焦点
+            if($(this).val()== ""){
+                alert("密码不能为空")
+            }
+            $(this).css({"boxShadow":" 0 0 0 0 red"});
+        });
+        $("input").focus(function(){ // 获得焦点
+            $(this).css({"boxShadow":" 0 0 15px 5px red"});
+        });
+
+        $("#chk").change(function(){ // 选中事件
+            alert("我被选中了")
+        });
+
+        $(window).keydown(function(event){
+           // alert("键盘按下的事件")
+        })
+
+        $(window).keyup(function(event){
+          // alert("键盘按下抬起的事件");
+        })
+
+        $(window).keypress(function(event){
+            //alert("键盘正在按下的事件");
+        });
+
+        $(window).resize(function(){ //当浏览器窗口大小发生改变时触发
+            $(".div1").text($(window).height());
+        });
+
+        $(window).scroll(function(){ // 浏览器窗口滚动事件
+           // alert(1);
+        });
+
+
+    });
+
+
+
+
+</script>
+</body>
+</html>

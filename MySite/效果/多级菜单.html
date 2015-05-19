@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery/jquery-1.11.2.min.js"></script>
+
+    <style type="text/css">
+        #zhang ul {
+            display: none;
+            border: 1px red solid;
+            color: #0066cc;
+        }
+
+        li {
+            list-style: none
+        }
+    </style>
+
+</head>
+<body>
+
+<ul id="zhang">
+    <li>
+        <span class="root">菜单二</span>
+        <ul>
+            <li class="DiEr">菜单一11
+               <ul>
+                            1111111111111
+               </ul>
+            </li>
+            <li class="DiEr">菜单一21
+                <ul>1111111111111</ul>
+            </li>
+            <li class="DiEr">菜单一31
+                <ul>1111111111111</ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span class="root">菜单三</span>
+
+        <ul>
+            <li>菜单一11</li>
+            <li>菜单一21</li>
+            <li>菜单一31</li>
+        </ul>
+    </li>
+    <li>
+        <span class="root">菜单四</span>
+
+        <ul>
+            <li>菜单一11</li>
+            <li>菜单一21</li>
+            <li>菜单一31</li>
+        </ul>
+    </li>
+    <li>
+        <span class="root">菜单五</span>
+
+        <ul>
+            <li>菜单一11</li>
+            <li>菜单一21</li>
+            <li>菜单一31</li>
+        </ul>
+    </li>
+</ul>
+
+
+</body>
+<script>
+
+    $("#zhang .root").click(function () {
+        $(this).siblings("ul").slideToggle(400);
+    });
+
+    $("#zhang .DiEr").click(function () {
+        $(this).nextAll("ul").slideToggle(400);
+    });
+
+</script>
+</html>

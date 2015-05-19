@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+<script type="text/javascript">
+    //验证电子邮件
+     function ckEmail(){
+
+          var email=document.getElementById("emial").value;
+
+         //判断电子邮件 是否为空 如果为空 返回
+         if(email.length<=0){
+             alert("请输入电子邮件！");
+             return false;
+         }
+
+         if(email.indexOf('@')<0){
+             alert("电子邮件格式不正确 \n  必须包含@！");
+             return false;
+         }
+
+         if(email.indexOf('.')<0){
+             alert("电子邮件格式不正确 \n  必须包含. ！");
+             return false;
+         }
+
+         return true;
+
+     }
+     function chUserName() {
+         //获取用户名  保存
+         // var userName=document.getElementById("usrName").value;
+         //或者写成
+         var userName = document.myForm.usrName.value;
+        //不可以为空  .length 是取字符串的长度
+        if (userName.length<=0){
+            alert("请输入用户名！");
+            return false;
+           
+        //获取用户名 长度
+        var userCount=userName.length;
+        //循环用户名
+        for(var i=0;i<userCount;i++){
+            //取出 用户名的单个字符
+            var user=userName.charAt(i);
+            //判断是否是数字
+            if(user<9 || user>0){
+                //如果是数字则返回
+                alert("名称中包含数字，请删除后再试！");
+                return false;
+            }
+        }
+     }
+
+    //验证密码
+    function ckPwd(){
+    }
+    function clearEmail(){
+    if(document.getElementById("emial").value=="请输入电子邮件"){
+        document.getElementById("emial").value="";
+    }
+    }
+    function resetEail(){
+        if(document.getElementById("emial").value==""){
+            document.getElementById("emial").value="请输入电子邮件";
+        }
+    }
+</script>
+</head>
+<body>
+
+  <form name="myForm" action="注册成功.html" method="post" onsubmit="return ckEmail();">
+    <table>
+        <tr>
+            <td colspan="2" align="center">注册</td>
+        </tr>
+        <tr>
+            <td>电子邮件</td>
+            <td>
+                <input type="text" value="请输入电子邮件" id="emial"
+                              onblur="resetEail();" onfocus="clearEmail();">
+            </td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td>
+                <input type="text" name="usrName">
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                <input type="password" name="userPwd">
+            </td>
+        </tr>
+    </table>
+    <button type="submit">注册111</button>
+</form>
+
+<script type="text/javascript">
+
+    var nihao="niHaoya";
+    // 7 字符串长度
+    var nihaoCount=nihao.length;
+   // o  索引位置的字符
+    var charAt=nihao.charAt(4);
+    // nihao  索引之间的字符
+    var subString=nihao.substring(0,5);
+  //大写
+    var upper=nihao.toUpperCase();
+    //小写
+    var lower=nihao.toLowerCase();
+
+    // 是否包含某个字符 第一个
+    var indexOf=nihao.indexOf('a');
+
+
+    // 是否包含某个字符 最后一个
+    var lastIndexOf=nihao.lastIndexOf('a');
+
+
+
+</script>
+
+</body>
+</html>

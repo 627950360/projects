@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../../js/jquery/jquery-1.11.2.min.js"></script>
+    <script>
+
+        $(function () {
+
+            var id = location.search.substring(4);
+
+            var url = "http://apis.juhe.cn/cook/queryid?key=96e775c1dc09f7324d6bb4d01f18b08a&id=" + id;
+
+            $.ajax({
+
+                url: url,
+
+                type: "POST",
+
+                async: true,
+
+                dataType: "jsonp",
+
+                succes: function (data) {
+
+                var item = data.result.data[0];
+
+                    var imgs = item.albums;
+                    $.each(imgs, function (index, imgSrc) {
+                        var itemHrml = '<img src="'+imgSrc+'" alt="暂无图片哦"/>';
+                        $("#zhang").append(itemHrml);
+                    });
+
+
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+<div id="zhang">
+    <!--<img src="http://img.juhe.cn/cookbook/t/1/1001_253951.jpg" alt="暂无图片哦"/>-->
+</div>
+
+</body>
+</html>

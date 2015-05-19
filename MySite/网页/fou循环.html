@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        function quanxuan(){
+
+                var items=document.getElementsByClassName("fuxuan");
+
+                var jiancha=document.getElementById("jiancha").checked;
+
+                for(var i=0;i<items.length;i++)
+
+               items[i].checked=jiancha;
+
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<input type="checkbox" onclick="quanxuan()" id="jiancha"/> 全选
+<br/>
+<input type="checkbox" class="fuxuan"/> 1
+<input type="checkbox" class="fuxuan"/> 2
+<input type="checkbox" class="fuxuan"/> 3
+<input type="checkbox" class="fuxuan"/> 4
+<input type="checkbox" class="fuxuan"/> 5
+<input type="checkbox" class="fuxuan"/> 6
+<input type="checkbox" class="fuxuan"/> 7
+
+</body>
+</html>

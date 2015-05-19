@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js" type="application/javascript"></script>
+    <style>
+        .tab-icon{width:500px;height:30px;margin:0 auto;background-color:gray;margin-bottom:10px}
+        .tab-icon > a{display:block;float:left;width:20%;line-height:30px;text-align:center;}
+        .tab-icon > .zhang{color:red;background:green;}
+        .tab-icon > .black{color:orange;}
+        .yun{width:500px;height:300px;margin:0 auto;border:1px solid red;position:relative;}
+        .yun > article{position:absolute;top:0;left:0;height:100%;width:100%;display:none;}
+        .yun > .zhang{display:block;}
+    </style>
+</head>
+<body>
+
+<nav class="tab-icon">
+    <a href="#" class="zhang">选项卡1</a>
+    <a href="#" class="black">选项卡2</a>
+    <a href="#">选项卡3</a>
+    <a href="#">选项卡4</a>
+    <a href="#">选项卡5</a>
+</nav>
+
+<section class="yun">
+    <article class="zhang">内容111111111111111111111111</article>
+    <article>内容22222222222222222222222222222</article>
+    <article>内容33333333333333333333333333333</article>
+    <article>内容444444444444444444444444444444</article>
+    <article>内容55555555555555555555555555555</article>
+</section>
+
+<script>
+  $(function(){
+      $(".tab-icon a").mouseover(function(){
+
+          var aaaa = $(this).index();
+           //找到第几个按钮
+
+          $(this).addClass("zhang"). siblings().removeClass("zhang");
+
+            //把这个按钮加上Class，把同辈其他的active按钮取消Class
+
+          $(".yun").find("article").eq( aaaa).addClass("zhang"). siblings().removeClass("zhang");
+
+          //找到所有的子元素，把变量名的按钮加上Class
+
+      });
+  });
+</script>
+</body>
+</html>

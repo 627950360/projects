@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>外部样式</title>
+
+    <!--引用外部样式文件-->
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/css1.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        a:visited{
+            color: #000000;}
+        a:hover{
+            color: blue}
+
+        a:active{
+            color: yellow}
+
+        p:first-line
+        {
+            color:#ff0000;
+            font-variant:small-caps;
+        }
+    </style>
+
+</head>
+<body>
+<p>
+    aaaaaaaaaaaaaaaaaaaaa<br/>
+    aaaaaaaaaaaaaaaaaaaaa<br/>
+    aaaaaaaaaaaaaaaaaaaaa<br/>
+</p>
+
+<a class="myyyy" href="#">没有title属性</a><br/><br/>
+<a class="myyyy" title>有title属性</a>
+<a class="myyyy" title="abc">有title属性</a>
+
+<div id="myid" class="myclass">
+    <span>
+        <a>dddd</a>
+        <a>dddd</a>
+        <a class="myclassAA">DDDDD</a>
+    </span>
+</div>
+
+
+<div class="aaa bbb" style="font-family:黑体">华文行楷<br/>
+    <a class="myclassAA">DDDDD</a>
+
+    华文行楷<br/>
+    华文行楷<br/>
+    华文行楷<br/>华文行楷<br/>
+    华文行楷<br/>
+    华文行楷<br/>
+    华文行楷<br/>
+    华文行楷<br/>
+
+</div>
+<div class="aaa bbb">ddddddddddddddd
+    <a href="http://www.baidu.coom">www.baidu.coom</a>
+</div>
+
+<span>bbbbbbbbbbbbbbb</span>
+
+<div class="ccc">ccccccccc</div>
+<div id="ddd">dddddddddddddd</div>
+</body>
+</html>

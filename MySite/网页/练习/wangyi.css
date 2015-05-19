@@ -1,0 +1,377 @@
+
+div {
+    border: 1px red solid;
+}
+
+body,div{margin: 0px}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.testDiv {
+    width: 100px;  
+    height: 300px;
+    background-color: #000000;
+}
+
+.wangyizhengping {
+    width: 100%;
+    height: 175px;
+    margin-top: 20px;
+    border: 2px solid #CFCFCF;
+}
+
+.siliao {
+    width: 100%;
+    height: 377px;
+    border: 2px solid #CFCFCF;
+}
+.xingwenyouxia{
+    height: 375px;
+    width: 100%;
+    border: 2px solid #CFCFCF;
+}
+.tupianshipin{
+    height: 310px;
+    width: 340px;
+    float:left;
+}
+.wenzianniu{
+    width: 378px;
+}
+.wenzhibiaoti{
+    float:left;
+    height: 90px;
+    width: 705px;
+}
+.tupianzhong{
+    height: 125px;
+}
+.anniutupian{
+    height: 570px;
+}
+
+.yili{
+    height: 145px;
+}
+.xingwenzhong{
+    height: 221px;
+}
+.zhutupian{
+    width: 1060px;
+    height: 150px;
+    float:left;
+}
+.dibian{
+    height: 240px;
+    width: 1060px;
+    float:left;
+    margin-left: 144px;
+}
+.dixia{
+    height: 45px;
+    width: 100%;
+    float:left;
+    background-color:#333333;
+
+}
+.diwenzi{
+    width: 900px;
+    color:#fff;
+    margin-top: 15px;
+    font-size: 13px;
+    margin-left: 200px;
+}
+
+
+.widthyibai {
+    width: 1335px;
+
+}
+
+.widthyibai1 {
+    height: 50px;
+    position: fixed;
+    background-color: #333333;
+    color: #fff;
+    width: 1346px;
+}
+
+.widthyibai-1 {
+    height: 3316px;
+    width: 1349px;
+}
+
+.juzhong {
+    margin: auto;
+    width: 1057px;
+}
+
+.jizhong-anniu {
+    height: 175px;
+    border: 1px #DCDDDD solid
+}
+
+.juzhongkuang {
+    height: 2428px;
+    margin-top: 30px
+}
+
+.juzhong1 {
+    height: 100px
+}
+
+.cssjuzong {
+    height: 95px;
+    border-bottom: 5px #206F96 solid;
+    width: 1060px;
+    margin: auto;
+}
+
+.gaozuopiao {
+
+    margin-top: 37px;
+    float: left;
+}
+
+.gaozuopiao2 {
+
+    height: 45px;
+    width: 490px;
+
+}
+
+.gaozuopiao3 {
+    height: 45px;
+    width: 145px;
+    margin-left: 11px
+}
+
+.gaozuopiao1 {
+    height: 45px;
+    width: 140px;
+    margin-top: 35px;
+}
+
+.gaokuan {
+    width: 650px;
+    height: 90px;
+    float: right;
+}
+
+.xingwen {
+    height: 75px;
+    padding-right: 18px;
+    margin-right: 18px;
+    margin-top: 10px;
+    border-right: 1px dashed #dcdddd;
+    float: left;
+}
+
+.xingwen1 {
+    width: 180px
+}
+
+.xingwen2 {
+    width: 165px
+}
+
+.xingwen3 {
+    width: 150px
+}
+
+.xingwen4 {
+    width: 140px;
+    height: 75px;
+    margin-top: 10px;
+    float: left
+}
+
+.xingwenkuang {
+    height: 960px;
+    width: 365px;
+    float: left
+}
+
+.jiaoyu {
+    height: 175px;
+    float: left;
+}
+
+.jiaoyu2 {
+    width: 686px
+}
+
+.jiaoyu-anniu {
+    width: 184px
+}
+
+.dianka {
+    height: 18px;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.anniuwanren {
+    height: 22px;
+    width: 100%;
+    display: block;
+    margin-top: 7px;
+}
+
+.anniuwanren1 {
+    height: 113px;
+}
+
+.anniuyou {
+    width: 140px;
+    height: 100%;
+    float: left;
+    margin-left: 11px;
+}
+
+.anniuyou1 {
+    width: 20px
+}
+
+.anniukuan {
+    width: 20px;
+    height: 100%;
+    float:left;
+    text-align: center;
+}
+
+.anniu {
+    width: 115px;
+    height: 100%;
+    float: left
+}
+
+.tupianqiche {
+    height: 960px;
+    width: 365px;
+    float: left
+}
+
+.tupian {
+    height: 295px;
+    width: 348px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tupiankuang {
+    width: 3110px;
+    height: 245px;
+}
+
+.tupiananniu {
+    height: 25px;
+    width: 100%
+}
+
+.qiehuan {
+    width: 100%;
+    height: 622px;
+    display: none;
+}
+
+.gao {
+    height: 50px;
+}
+
+.shippingwaikuang {
+    height: 37px;
+    width: 100%;
+    border-top: #206F96 solid 2px
+}
+
+.qiehuan1 {
+    width: 100%;
+    height: 610px;
+    display: block;
+    margin-top: 20px;
+}
+
+.kuan {
+    height: 920px;
+    margin-top: 0px;
+}
+
+.wangyi {
+    height: 2428px;
+    width: 324px;
+    float: right
+}
+
+.wangyikuang {
+    height: 465px;
+    width: 100%;
+    border: 2px #CFCFCF solid
+}
+
+.wangyitupian {
+    height: 270px;
+    width: 100%;
+    margin-top: 20px
+}
+
+.wenzhi {
+    height: 100px;
+    width: 100%;
+    border: 2px #CFCFCF solid;
+    margin-top: 20px;
+}
+
+.huochepiao {
+    height: 280px;
+}
+
+.baoyou {
+    height: 280px;
+}
+
+.zhongkuang {
+    height: 1100px;
+    width: 720px;
+    float: left
+}
+.MeiZhi{
+    margin-left: 60px;
+}
+.CheXing{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+#ShiPingKuang{
+    width:360px;
+    height: 531px;
+    float:left;
+}
+#ShiPingKuang1{
+    width:300px;
+    height: 531px;
+    margin-left: 43px;
+    float:left;
+}
+#Di{
+    width: 882px;
+    height: 155px;
+    margin-top:50px;
+}
+.DiXiaWenZi{
+    width: 220px;
+    height: 100%;
+    float:left;
+}
+.DiWenZiYangShi{
+    display: block;
+    margin-top: 15px;
+    color:#666666;
+}

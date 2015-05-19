@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+
+    <script>
+
+
+        function kaishi() {
+//            var zhang = document.getElementsByClassName("quanxuan");
+//            var yun = document.getElementById("kaishi").checked;
+//            for (var i = 0; i < zhang.length; i++) {
+//                zhang[i].checked = yun
+//            }
+
+
+          //  var isChecked = $("#kaishi").get(0).checked;
+         //   $("#items :checkbox").prop("checked",isChecked);
+
+            $("#items :checkbox").prop("checked",$("#kaishi").get(0).checked);
+
+        }
+
+
+        $(function () {
+
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+
+<input type="checkbox" id="kaishi" onclick="kaishi()">全选
+<br/>
+
+<div id="items">
+    <input type="checkbox" class="quanxuan">1
+    <input type="checkbox" class="quanxuan">2
+    <input type="checkbox" class="quanxuan">3
+    <input type="checkbox" class="quanxuan">4
+    <input type="checkbox" class="quanxuan">5
+    <input type="checkbox" class="quanxuan">6
+</div>
+漂浮
+
+</body>
+</html>

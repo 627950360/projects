@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片按钮</title>
+    <style type="text/css">
+        .buttom{
+            width: 67px;
+            height: 66px;
+            background-image: url(buttom.jpg);/*找到buttom.jpg这个文件>*/
+            background-position-x: -133px;
+            background-position-y: -18px;
+            margin:0px;
+            padding:0px;
+            border:0px;
+        }
+
+        .buttomHover:hover{background-position-y:-80px;}
+
+    </style>
+</head>
+<body>
+<!--鼠标移上时改变显示图片的位子    移开时的图片显示位子-->
+<button class="buttom" onmouseover="this.style.backgroundPositionY='-80px'"
+
+                         onmouseout="this.style.backgroundPositionY='-18px'"></button>
+
+<button class="buttom buttomHover"></button>
+</body>
+</html>

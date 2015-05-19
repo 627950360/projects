@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .qixi{font-size: 40px;}
+        .floatImg{ position: absolute;top:50px;left:500px;}
+    </style>
+
+    <script type="text/javascript">
+        <!--显示图片 -->
+        function showMe(){
+            document.getElementById("floatImg").style.display="block";
+        }
+
+        <!--隐藏图片 -->
+            function hideMe(){
+                document.getElementById("floatImg").style.display="none";
+            }
+    </script>
+
+</head>
+<body>
+<div>
+    <button onclick="showMe();">显示图片</button>
+    <button onclick="hideMe();">隐藏图片</button>
+</div>
+
+<div class="qixi">七夕情人节七夕情人节七夕情人节七夕情人节七夕情人节</div>
+<div class="qixi">七夕情人节七夕情人节七夕情人节七夕情人节</div>
+
+<img src="buttom.jpg" class="floatImg" id="floatImg">
+
+
+
+</body>
+</html>

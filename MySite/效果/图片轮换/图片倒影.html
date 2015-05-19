@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+     body,div{margin: 0px}
+    img{width: 100px;height: 150px;border: 1px  red solid;margin-left: 0px;margin-top: 0px;position: absolute}
+        body{background-color: #A9DBE6}
+    </style>
+    <script>
+        $(function(){
+
+
+            $("#tuPian8").mouseover(function(){
+                $(this).animate({left: '960px',top:"71px"}, "slow").delay(1800).animate({top:'450px'}).delay(1800).animate({left:'300px',top:"71px"}).delay(1800)
+                        .animate({top:"450px"}).delay(1800).animate({left:'960px'}).delay(1800).animate({top:"71px"}).delay(1800).animate({left:'300px'}).delay(1800).animate({top:"450px"})
+            });
+
+            $("#tuPian9").mouseover(function(){
+                $(this).animate({left: '1060px',top:"221px"}, "slow").delay(1800).animate({top:'300px'}).delay(1800).animate({left:'200px',top:"221px"}).delay(1800)
+                        .animate({top:"300px"}).delay(1800).animate({left:'1060px'}).delay(1800).animate({top:"221px"}).delay(1800).animate({left:'200px'}).delay(1800).animate({top:"300px"})
+            });
+
+            $("#tuPian10").mouseover(function(){
+                $(this).animate({left: '1160px',top:"371px"}, "slow").delay(1800).animate({top:'150px'}).delay(1800).animate({left:'100px',top:"371px"}).delay(1800)
+                        .animate({top:"150px"}).delay(1800).animate({left:'1160px'}).delay(1800).animate({top:"371px"}).delay(1800).animate({left:'100px'}).delay(1800).animate({top:"150px"})
+            });
+
+            $("#tuPian11").mouseover(function(){
+                $(this).animate({left: '1260px',top:"521px"}, "slow").delay(1800).animate({top:'0px'}).delay(1800).animate({left:'1px',top:"521px"}).delay(1800)
+                        .animate({top:"1px"}).delay(1800).animate({left:'1260px'}).delay(1800).animate({top:"521px"}).delay(1800).animate({left:'1px'}).delay(1800).animate({top:"1px"})
+            });
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+
+       <img src="images/zhu.png" id="tuPian8">
+       <img src="images/zhu.png" id="tuPian9">
+       <img src="images/zhu.png" id="tuPian10">
+       <img src="images/zhu.png" id="tuPian11">
+</body>
+</html>

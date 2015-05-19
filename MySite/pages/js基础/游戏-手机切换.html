@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        table {
+            border: 1px red solid
+        }
+ </style>
+
+    <script type="application/javascript">
+
+        function shouji(){
+            document.getElementById("you").style.display="none";
+            document.getElementById("yun1").style.display="block";
+        }
+        function youxi(){
+            document.getElementById("yun1").style.display="none";
+            document.getElementById("you").style.display="block";
+        }
+
+        function shoujiyouxi(par1,par2){
+            document.getElementById("you").style.display=par1;
+            document.getElementById("yun1").style.display=par2;
+        }
+      </script>
+</head>
+<body>
+<table style=";width:400px;height:500px;">
+    <tr style=";width:100px;height:100px;">
+        <td>
+            <div style="background-color: #2785DA" onmouseover="shoujiyouxi('none','block');">
+                游戏点卡
+            </div>
+        </td>
+        <td>
+            <div style="background-color:orangered;" onmouseover="shoujiyouxi('block','none');">手机充值</div>
+
+        </td>
+    </tr>
+    <tr style=";width:100px;height:100px;">
+        <td colspan="2" align="center"><div style=display:none; id="yun1">运营商 </div>  <div id="you"> 游戏</div></td>
+
+    </tr>
+
+</table>
+
+
+</body>
+</html>

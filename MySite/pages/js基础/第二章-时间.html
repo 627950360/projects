@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>第二章</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">
+        //改变链接 为百度
+        function changeLink(aName, aHref) {
+            //改变A 的文字为百度
+            document.getElementById("myA").innerHTML = aName;
+            //改变A 的链接为百度
+            document.getElementById("myA").href = aHref
+        }
+
+        //改变链接 为百度
+        function changeLink2() {
+            //改变A 的文字为百度
+            document.getElementById("myA").innerHTML = "百度";
+            //改变A 的链接为百度
+            document.getElementById("myA").href = "http://www.baidu.com";
+        }
+
+        function getWindowWidth() {
+            //获取窗口宽度  screen 屏幕
+            var winWidth = window.screen.width;
+            alert(winWidth);
+        }
+
+        function getWindowHeight() {
+            //获取屏幕高度
+            var winHeight = window.screen.height;
+            alert(winHeight);
+
+        }
+
+
+        function getDate() {
+            //获取当前时间
+            var now = new Date();
+            //获取年份
+            var year = now.getFullYear();
+
+            //获取月份  默认一月份为0 12月份为11 所以月份都要加1
+            var month = now.getMonth() + 1;
+
+            //获取 星期几
+            var day = now.getDay();
+
+            //获取 今天几号
+            var date = now.getDate();
+
+            //获取小时
+            var hour = now.getHours();
+
+            //获取分钟
+            var min = now.getMinutes();
+
+            //获取秒
+            var sec = now.getSeconds();
+
+            var fullTime = year + "/" + month + "/" + date + "   " + hour + ":" + min + ":" + sec;
+            alert(fullTime);
+        }
+
+        function StartClock() {
+
+            //获取当前时间
+            var now = new Date();
+            //获取年份
+            var year = now.getFullYear();
+
+            //获取月份  默认一月份为0 12月份为11 所以月份都要加1
+            var month = now.getMonth() + 1;
+
+            //获取 星期几
+            var day = now.getDay();
+
+            //获取 今天几号
+            var date = now.getDate();
+
+            //获取小时
+            var hour = now.getHours();
+
+            //获取分钟
+            var min = now.getMinutes();
+
+            //获取秒
+            var sec = now.getSeconds();
+
+            var fullTime = year + "年" + month + "月" + date + "日  " + hour + "时" + min + "分" + sec + "秒";
+
+            //重置div内容
+            document.getElementById("div_clock").innerHTML = fullTime;
+
+            //定时器 每隔一秒调用函数StartClock
+            setTimeout("StartClock()", 1000);
+        }
+
+
+    </script>
+
+
+</head>
+<body onload="StartClock()">
+
+<a href="http://www.taobao.com" id="myA" target="_blank">淘宝</a>
+<button onclick="changeLink2();">点击改变DOM节点百度</button>
+<button onclick="changeLink('QQ','http://www.QQ.com');">点击改变DOM节点为QQ</button>
+
+
+<!--     弹出提示框     -->
+<button onclick="alert('我被点击了');">alert点击</button>
+
+<!-- 弹出提示框  带确定 和  取消    -->
+<button onclick="confirm('我被点击了吗？')">confirm点击</button>
+
+<!--  打开新窗口 参数为：地址  -->
+<button onclick="window.open('http://www.baidu.com');">打开百度</button>
+
+<!--  关闭窗口 -->
+<button onclick="window.close();">关闭窗口</button>
+
+<!-- 打开模式（模态）窗口  -->
+<button onclick="window.showModalDialog('chapterOne.html');">打开模式窗口(谷歌不支持IE支持)</button>
+
+<!-- 获取屏幕宽度-->
+<button onclick="getWindowWidth();">获取浏览器宽度</button>
+
+
+<!-- 获取屏幕高度-->
+<button onclick="getWindowHeight();">获取浏览器高度</button>
+
+
+<button onclick="getDate();">获取时间</button>
+
+
+<br/><br/><br/>
+
+<div id="div_clock" style="text-align: center;border: solid 1px red;">
+</div>
+
+</body>
+</html>

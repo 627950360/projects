@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js"></script>
+
+    <style type="text/css">
+
+     #box{width:1000px;margin:0 auto;}
+     #box ul{border:1px #ccc solid; height:30px;position: relative; }
+     #box ul li{ width:160px;padding-left: 10px;float:left; list-style-type: none;line-height: 30px;  }
+     #box ul li:hover{background-color: #06c;  color: #fff;;  }
+     #box ul li:hover ul{display: block;}
+     .child{display: none; position: absolute;}
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="box">
+    <ul>
+        <li class="index">首页</li>
+        <li>公司介绍
+        <ul class="child">
+            <li>产品</li>
+            <li>设计</li>
+        </ul>
+
+        </li>
+        <li>关于我们</li>
+    </ul>
+
+
+</div>
+
+
+
+
+</body>
+</html>

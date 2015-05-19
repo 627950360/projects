@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        ul, li {
+            list-style: none;
+            line-height: 25px;
+            font-size: 13px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            color: #444444
+        }
+
+        a:hover {
+            color: red
+        }
+
+        .fontWeight {
+            font-weight: bold
+        }
+
+        .inlineBlock {
+            display: inline-block;
+            width: 180px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+    //        //对象声明1
+    //        var people = {name:'小明',sex:'男',age:20};
+    //        //对象声明2
+    //        var people2 = {};
+    //        people2.name="小明";
+    //        people2.sex="男";
+    //        people2.age="20";
+
+        var list = [
+            '漳州爆炸后附近下"黑雨" 养殖户反映海马死亡',
+            '漳州环保局长受访时"被打伞" 官方回应(图)',
+            '南京股民忘记账户密码 7年未动2万资金变14万',
+            '韩媒:黃炳誓成朝鲜"二号人物" 崔龙海或退出',
+            '落马校长:奋斗一生存不到200万 同学都是富翁',
+            '泰国一邮轮发生爆炸 船上约有16名中国游客'
+        ];
+
+        //定义数组  数组内存放的是一个个商品对象  每个商品对象有img、name、price等属性
+        var list2 = [
+            {img: '../../images/taobao1/1.jpg', name: '商品0000000001',price:100.33},
+            {img: '../../images/taobao1/2.jpg', name: '商品0000000002',price:789.00},
+            {img: '../../images/taobao1/3.jpg', name: '商品0000000003',price:123.00},
+            {img: '../../images/taobao1/4.jpg', name: '商品0000000004',price:222.00},
+            {img: '../../images/taobao1/5.jpg', name: '商品0000000005',price:333.00},
+            {img: '../../images/taobao1/6.jpg', name: '商品0000000006',price:456.00}
+        ];
+
+
+        window.onload = function () {
+
+            var html = "";
+            for (var i = 0; i < list.length; i++) {
+                html = html + "<li><a href='#'>" + list[i] + "</a></li>";
+            }
+            document.getElementById("items").innerHTML = html;
+
+            //处理商品数组信息
+            html = "";
+            for (var i = 0; i < list2.length; i++) {
+                //当前商品对象
+                var item = list2[i];
+                //根据对象生成html代码
+                var itemHtml = "<div class='inlineBlock'><img src='"+item.img+"' /><span>"+item.name+"</span>   价格：<span>"+item.price+"</span></div>";
+                //累加每个对象生成的html代码
+                html = html + itemHtml;
+            }
+            document.getElementById("items2").innerHTML = html;
+
+
+        };
+    </script>
+
+</head>
+<body>
+
+<div style="border: solid 5px #555555;margin: auto;width:570px;padding: 10px;margin-top:5px">
+    <p>最新新闻</p>
+    <ul id="items">
+
+    </ul>
+</div>
+
+
+
+<div style="border: solid 5px #555555;margin: auto;width:570px;padding: 10px;margin-top:5px">
+    <p>最IN商品</p>
+    <ul id="items2">
+
+    </ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Jquery 选择器</title>
+    <script src="jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        div {
+            background-color: red;
+            width: 1000px;
+            margin: 0 auto;
+            height: 400px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        //function $(id){
+        //  return document.getElementById(id);
+        //  }
+    </script>
+
+
+</head>
+<body>
+<div id="divOne" class="two one"></div>
+
+<div class="two"></div>
+
+<div class="one"></div>
+
+<div id="two">
+    <div class="one"></div>
+</div>
+
+<script>
+    $("#divOne.two").html(1111);
+
+    $(".two").eq(1).html(2222);
+
+    $(".one").eq(1).html(3333);
+
+    var ishizi = $(".two").eq(1).html();
+
+    // alert(ishizi);
+
+
+    //  $("#divOne").css("color","#ccc");
+
+
+    // $("#divOne").css("font-size","50px");
+
+
+    //  $("#divOne").css("background-color","black")
+
+
+    //  $("#divOne").css({"color":"#ccc","background-color":"black","font-size":"100px","border":"20px blue solid"});
+
+
+    //  $(".two").eq(1).css({"border":"10px blue solid"});
+
+
+    $(".one").click(function () {
+
+        //  alert(111);
+
+    });
+
+
+    $(".two").mouseover(function () {
+
+        //  alert(222);
+
+    });
+
+
+    $(".one").mouseout(function () {
+
+        // alert(333);
+
+    });
+    //11
+
+    $("#divOne").mouseover(function () {
+
+        $("#divOne").html(1234567890).css({"background-color": "black", "border": "10px #ccc solid"});
+
+
+    });
+
+    $("#divOne").mouseout(function () {
+
+        $("#divOne").css({"background-color": "red", "border": "0"});
+
+    });
+
+
+    //22
+    $(".two").eq(1).mouseover(function () {
+
+        $(".two").eq(1).css({"background-color": "black", "border": "20px red solid"})
+
+    });
+
+    $(".two").eq(1).mouseout(function () {
+
+        $(this).text("765432dfcfefced").css({"background-color": "cyan"})
+
+    });
+
+
+    //33
+
+    $(".one").eq(1).mouseover(function () {
+        $(this).css({"background-color": "yellow"})
+    })
+
+
+    $(".one").eq(1).mouseout(function () {
+
+        $(this).html(00000000000).css({"background-color": "cyan"})
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="application/javascript">
+
+        //往浏览器写入一句话
+        //document.write("ertyuio");
+
+        //var count = 10;
+        //count++;
+        //document.write(count);
+
+        if (1 + 1 == 2) {
+            //
+            document.write("成立");
+
+        } else {
+            //
+            document.write("不成立");
+
+        }
+
+        document.write("----------------------------------------------------------------------------------------");
+
+        var h = 3;
+        //此代码不会被执行
+
+        /*
+         此代码不会被执行
+         此代码不会被执行
+         此代码不会被执行此代码不会被执行
+         此代码不会被执行
+         此代码不会被执行
+         此代码不会被执行
+         此代码不会被执行
+         此代码不会被执行
+
+         */
+
+
+        switch (h) {
+            case 0:
+                document.write("0");
+                break;
+            case 1:
+                document.write("1");
+                break;
+            case 4:
+                document.write(3);
+                break;
+            default:
+                document.write("没有");
+        }
+
+
+        for (var i = 0; i <= 100; i = i + 3) {
+            document.write(" " + i);
+        }
+
+        document.write("----------------------------------------------------------------------------------------");
+
+        var j = 0;
+
+        while (j <= 100) {
+            document.write(" " + j);
+            j++;
+        }
+
+        // var myEle =  document.getElementById("myInput");
+
+        var a = "45";
+        var b = "54";
+        //数字只有转化为整形才可以相加
+        document.write(parseInt(a) + parseInt(b));
+
+        //定义
+        function Name(a, b) {
+            //   undefined
+            //函数代码
+            document.write(parseInt(a) + parseInt(b));
+        }
+
+
+        function pageLoad() {
+            //var v = document.getElementById("myInput").value;
+            //document.write(v);
+            //document.write("<br/><br/>加载成功了哦。。。。。。。。。<br/><br/>");
+        }
+
+        function getValue() {
+
+            //内置函数---弹出提示框
+            //alert("123456789");
+
+            //弹出确认框  并且返回【true\false】
+            var r = confirm("确定提交么？");
+            if (r) {
+                //.......
+                document.write("恭喜，提交成功！");
+            } else {
+                document.write("真遗憾，下次再来！");
+            }
+
+        }
+
+
+
+
+        function setVal1() {
+            //获取值
+            document.getElementById("txt1").value="i love you !";
+        }
+        function getVal1() {
+            //设置值
+            var content = document.getElementById("txt1").value;
+            alert(content);
+        }
+
+
+        function setVal2() {
+            document.getElementById("div1").innerHTML="i love you !";
+        }
+        function getVal2() {
+            var content = document.getElementById("div1").innerHTML;//内部所有htnl内容，包括标签
+            //var content = document.getElementById("div1").innerText;//内部纯文本  不包括标签
+            alert(content);
+        }
+
+    </script>
+
+</head>
+<body onload="pageLoad();">
+
+<br><br><br>
+<input type="text" value="123" id="myInput"/>
+
+<input type="button" value="点击我调用getValue函数" onclick="getValue()"/>
+<br><br><br>
+
+<input type="text" id="txt1"/>
+<input type="button" id="btna1" value="获取值" onclick="getVal1()"/>
+<input type="button" id="btna2" value="设置值" onclick="setVal1()"/>
+<br><br><br>
+
+<div id="div1" style=" border: solid 1px red;height: 20px; width: 100px">
+    <a>aaaa</a>dddd
+</div>
+<input type="button" id="btnb1" value="获取值" onclick="getVal2()"/>
+<input type="button" id="btnb2" value="设置值" onclick="setVal2()"/>
+<br><br><br>
+
+</body>
+
+<script type="application/javascript">
+    //调用;;kk
+    Name(5, 6);
+    Name(5);
+</script>
+
+</html>

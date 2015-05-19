@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery/jquery-1.11.2.min.js" type="application/javascript"></script>
+    <style>
+        html, body, * {
+            padding: 0px;
+            margin: 0px
+        }
+    </style>
+    <script>
+
+
+        var browerWidth = document.documentElement.clientWidth;
+        var left = 0;
+        function startFly() {
+            var ele = document.getElementById("fly");
+            left = left + 1;
+            ele.style.left = left + "px";
+            var myTime = setTimeout("startFly()", 1);
+            if (left > 1099) {
+                clearTimeout(myTime);
+            }
+        }
+
+        var browerHeight = document.documentElement.clientHeight;
+        var posionTop = 0;
+        function piaoFu() {
+            var ele = document.getElementById("fl");
+            posionTop = posionTop + 1;
+            ele.style.top = posionTop + "px";
+            var myTime = setTimeout("piaoFu()", 1);
+            if (posionTop > 500) {
+                clearTimeout(myTime);
+            }
+        }
+
+        var browerWidth = document.documentElement.clientWidth;
+        var browerHeight = document.documentElement.clientHeight;
+
+        var tempBottom = 0;
+        var tempLeft = 0;
+
+
+        function   () {
+            var ele = document.getElementById("f2");
+
+            var targetHeight = browerHeight - $("#f2").height();
+            var targetWidth = browerWidth - $("#f2").width();
+
+            if (tempLeft == 0) {
+                tempBottom++;
+                ele.style.bottom = tempBottom + "px";
+            }
+            if (tempBottom == targetHeight && tempLeft < targetWidth) {
+                tempLeft++;
+                ele.style.left = tempLeft + "px";
+            }
+
+            if (tempLeft == targetWidth && tempBottom > 0) {
+                tempBottom--;
+                ele.style.bottom = tempBottom + "px";
+            }
+
+            if (tempBottom == 0 && tempLeft > 0) {
+                tempLeft--;
+                ele.style.left = tempLeft + "px";
+            }
+
+            var myTime = setTimeout("piaoFu2()", 0.5);
+            if (tempLeft == 0 && tempBottom == 0) {
+                clearTimeout(myTime);
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div id="f2"
+     style="position:absolute;left:0px;bottom:0px;width:266px;height:146px;z-index: 1; background-color: darkcyan">
+
+    <button onclick="piaoFu2()">四周漂浮</button>
+</div>
+
+
+<div id="fly" style="position:absolute;left:0px;top:80px;width:266px;height:135px;z-index: 1; background-color: red">
+
+    <button onclick="startFly()">Start</button>
+</div>
+
+<br><br>
+
+
+<div id="fl"
+     style="position:absolute;left:500px;top:0px;width:266px;height:135px;z-index: 1; background-color: darkcyan">
+
+    <button onclick="piaoFu()">漂浮移动</button>
+</div>
+
+
+</body>
+</html>
+

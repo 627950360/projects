@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+</head>
+<body>
+<script type="text/javascript">
+
+    //一维数组
+     //新建一个空数组
+    var array=new Array();
+     //添加两个值
+    array.push(10);
+    array.push(11);
+    for(var i in array){
+        document.write(array[i]);
+    }
+   //二维数组
+     var array2=new Array(2);
+     //添加两个值
+     array2[0]=[1,2,3,4,5,6,7,8];
+     array2[1]=[8,7,6,5,4,3,2,1];
+     for(var i in array){
+         //取出数组中的值
+         var suzu=array2[i];
+         //因为是值也是数组 所有 也要遍历
+         for(var j in suzu) {
+             document.write(suzu[j]+"<br/>");
+         }
+     }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+
+        div {
+
+            border: red 1px solid;
+
+        }
+
+        .dianji {
+
+            border: red 1px solid;
+            width: 500px;
+            height: 500px;
+
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        function kaishi() {
+
+            for (var m = 1; m < 10; m++) {
+                document.write("<br/>" + m);
+            }
+
+            fun1();
+
+            //调用有返回值的函数  并且声明变量接收返回值
+            var val = jiaFaYunSuan(1, 4);
+            document.write("<br/><br/> 1+4=" + val);
+
+            document.write("<br/>");
+
+            //-------------------------------------数组--------------------------------------------
+            //新建一个空数组
+            // var array = new Array();//声明空数组方法1
+            var array = [];//声明空数组方法2
+            //添加两个值
+            array.push(10);
+            array.push(11);
+            array.push("wang!!");
+            for (var i in array) {
+                document.write("<br/>" + array[i]);
+            }
+
+            //声明有元素的数组对象
+            var arrList = [10,11,"wang!!"];
+            for (var i in arrList) {
+                document.write("<br/>" + array[i]);
+            }
+
+        } 
+
+        function fun1() {
+            document.write("<br/>OK 了 哦 ！！");
+        }
+
+        //带有返回值的函数
+        function jiaFaYunSuan(first, second) {
+            var value = first + second;
+            return value;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="dianji">
+
+    <input type="button" onclick="kaishi()" style="margin-left: 50px" id="fu" value="点击"/>
+
+
+</div>
+
+
+</body>
+</html>
+
+

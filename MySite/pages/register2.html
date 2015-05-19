@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新用户注册</title>
+
+    <!--样式开始-->
+    <style type="text/css">
+
+        /*初始化页面标签的内边距、外边距 , 网页字体大小、字体颜色*/
+        html, body, * {
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            color: #999999
+        }
+
+        /*去除所有a标签的下划线*/
+        a {
+            text-decoration: none
+        }
+
+        /*最大层的样式*/
+        #main {
+            width: 1006px; /*宽度*/
+            margin: auto; /*最大的层居中*/
+        }
+
+        /*三个层（上中下）的边框设置为：实线、1px、红色 ， 上外边距为5px */
+        .divBorder {
+            border: solid 1px red;
+            margin-top: 5px
+        }
+
+        #content {
+            border: solid 1px #CCCCCC;
+            border-top: none; /*去除上边距*/
+        }
+
+        #content_top {
+            height: 39px;
+            background-image: url(../images/register/login_img10.gif); /*设置背景图片*/
+            background-repeat: repeat-x; /*设置背景图片平铺*/
+        }
+
+        #content_top div {
+            float: right; /*往右漂浮*/
+        }
+
+        #content_top div a {
+            display: inline-block; /*设置成块级元素，可以方便设置高和宽*/
+            height: 39px;
+            text-align: center; /*内容居中*/
+        }
+
+        #content_top_1 {
+            width: 96px;
+            background-image: url(../images/register/login_img14.gif);
+        }
+
+        #content_top_2 {
+            width: 96px;
+            background-image: url(../images/register/login_img15.gif);
+        }
+
+        /*设置中两边部分三个主要层往左漂浮*/
+        .content_c {
+            float: left;
+        }
+
+        /*设置中间部分的主要层往左漂浮*/
+        .content_c1 {
+            float: left;
+            border: red 0px solid;
+
+        }
+
+        /*设置中间部分三个主要层左右两边层的宽*/
+        #content_left, #content_right {
+            width: 342px;
+            height: 398px;
+        }
+
+        #content_left {
+            background-image: url(../images/register/register_img1.gif);
+        }
+
+        #content_right {
+            background-image: url(../images/register/register_img2.gif);
+        }
+
+        /*设置中间部分三个主要层中间层的宽*/
+        #content_center {
+            width: 317px;
+            height: 398px;
+            background-image: url(../images/register/register_img3.gif);
+        }
+
+        /*让（首页\帮助）往右上角漂浮*/
+        #top_help {
+            float: right
+        }
+
+        /*设置（首页\帮助）当鼠标移上去的时候变色*/
+        #top_help a:hover {
+            color: #FD7600
+        }
+
+        #bottom {
+            clear: both; /*清除漂浮*/
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .xingyi {
+            border-height：50px；
+            margin-top: 10px;
+            margin-left: 50px;
+
+        }
+
+        .xingyi1 {
+            margin-top: 50px;
+        }
+
+        .aaa input {
+            height: 25px;
+            width: 160px;
+        }
+
+        .bbb {
+            font-size: 15px
+
+        }
+
+    </style>
+    <!--样式结束-->
+
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<div id="main">
+
+    <div id="top" style="">
+        <img src="../images/register/login_img1.gif"/>
+        <img src="../images/register/login_img2.gif"/>
+        <span id="top_help">
+            <a href="#">首页</a>|<a href="#">帮助</a>
+        </span>
+    </div>
+
+    <div id="content">
+        <div id="content_top">
+            <div>
+                <a id="content_top_1" href="#">&nbsp;</a><a id="content_top_2" href="#">&nbsp;</a>
+            </div>
+        </div>
+        <div id="content_left" class="content_c">&nbsp;</div>
+        <div id="content_center" class="content_c1">
+            <div id="a11" class="xingyi1">
+                <table border="0" height="250" width="300">
+                    <tr>
+                        <td class="bbb">*Email:</td>
+                        <td class="aaa"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="bbb">*用户名：</td>
+                        <td class="aaa"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="bbb">*密码：</td>
+                        <td class="aaa"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="bbb">*重复密码：</td>
+                        <td class="aaa"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="bbb">*验证码：</td>
+                        <td class="aaa"><input type="text"></td>
+                    </tr>
+
+                </table>
+                <pre>                  <input type=button style=width:130px;height:30px;background:#FE9A00
+                                              value="确认并同意以下条款"></pre>
+                <pre>                   <input type="checkbox"/>我以阅读</pre>
+            </div>
+        </div>
+        <div id="content_right" class="content_c">&nbsp;</div>
+    </div>
+
+    <div id="bottom">
+        <p>
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a> |
+            <a href="#">网站导航</a>
+        </p>
+
+        <p>
+            无忧工作网版权所有©1999-2015
+        </p>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

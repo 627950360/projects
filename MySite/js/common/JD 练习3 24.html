@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+
+        var w = 100;
+        while (w > 0) {
+            document.write("<HR align=center width=" + w + "%>");
+            w = w - 5;
+        }
+
+        for (var j = 5; j < 100; j = j + 5) {
+            document.write("<HR align=center width=" + j + "%>");
+        }
+
+        function zhang() {
+            var count = document.myForm.txtCount.value;
+            for (i = 0; i < count; i++) {
+                document.write("<H2>1111111</H2>");
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<FORM name="myForm" method="post" action="http://www.chonglu.wang">
+    <p>输入111的次数；
+        <input name="txtCount" type="text" id="txtCount"/>
+
+    <p>
+
+    <p><input type="button" name="Submit" value="显示1111111" onclick="zhang()"/>
+    </p>
+</FORM>
+<hr>
+<br>
+<br>
+<br>
+
+</body>
+</html>

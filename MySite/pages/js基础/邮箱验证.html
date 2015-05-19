@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        function kaishi() {
+
+            var zhang = document.getElementById("youxiang").value;
+            if (zhang.length <= 8) {
+                alert("邮箱格式不对 最少输入8位！");
+                return false;
+            }
+            if (zhang.indexOf('@') < 0) {
+                alert("电子邮箱格式不正确 必须有@");
+                return false;
+            }
+            if (zhang.indexOf('.') < 0) {
+                alert("电子邮箱格式不正确  必须有  .");
+                return false;
+            }
+
+
+
+            var zhang1 = document.getElementById("yonghu").value;
+            if (zhang1.length <= 8) {
+                alert("用户格式不对 最少输入8位！");
+                return false;
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+<form name="myForm" action="注册成功.html" method="post" onsubmit="return kaishi();">
+    <div style="width:200px;height:500px">
+
+        <div style="">注册</div>
+        <div style="width: 500px;height:20px">
+            <div style="float:left">电子邮件</div>
+            <input style="float:left" id="youxiang">
+            <a href="#"></a>
+        </div>  
+        <div>
+            <div style="width: 500px;height:20px;float:left">
+                <div style="float:left">用户名</div>
+                <input style="float:left;margin-left: 16px" id="yonghu">
+                <a href="#"></a>
+            </div>
+
+            <div>
+                <div style="width: 500px;height:20px">
+                    <div style="float:left">密码</div>
+                    <input style="float:left;margin-left: 32px">
+                    <a href="#"></a>
+                </div>
+                <div>
+                    <button>登录</button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</form>
+</body>
+</html>

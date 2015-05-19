@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        //新建数组
+        var  cityArray=new Array(1);
+        cityArray['上海']=['上海'];
+        cityArray['江苏']=['淮安','苏州','盐城','南通'];
+
+        function changeCity(){
+            //清除 所有城市
+            document.myForm.selCity.length=0;
+            //获取选中的城市值
+            var pro=document.myForm.selPro.value;
+            //获取城市
+            var citys=cityArray[pro];
+            //遍历城市
+            for(var i in citys){
+                //取出单个城市
+                var opt=new Option(citys[i]);
+                //添加单个城市
+                document.myForm.selCity.options.add(opt);
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+</head>
+<body>
+<form name="myForm">
+
+    <table>
+        <tr>
+            <td>省份</td>
+
+            <Td> <select name="selPro" onchange="changeCity();">
+                <option>上海</option>
+                <option>江苏</option>
+
+            </select>  </Td>
+        </tr>
+
+        <tr>
+            <td>城市</td>
+
+            <Td> <select name="selCity"></select>  </Td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+</body>
+</html>

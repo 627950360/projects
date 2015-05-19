@@ -1,0 +1,20 @@
+div {
+    min-height: 100px;
+}
+
+div a, span, .ccc, #ddd {
+    color: red;
+}
+
+.myclass .myclassAA {
+
+}
+
+#myid span .myclassAA{
+
+
+}
+
+.myyyy{ color: red}
+.myyyy[title]{font-size: 25px}
+.myyyy[title="abc"]{ font-weight: 800}

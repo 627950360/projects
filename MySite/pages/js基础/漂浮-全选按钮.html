@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>JS练习</title>
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: #2785DA;
+            border: 1px red solid;
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function yanse(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        //漂浮层的初始化绝对定位top值
+        var advInitTop = 20;
+        //滚动事件的具体实现函数
+        function move() {
+            //获取浏览器滚动条卷去的高度（滚去的高度）
+            var sTop = document.body.scrollTop + document.documentElement.scrollTop;
+            //重新定位层的绝对定位top值
+            document.getElementById("pf").style.top = (advInitTop + sTop) + "px";
+        }
+
+        //为浏览器滚动条滚动事件赋予处理函数
+        window.onscroll = document.onscroll = move;
+
+        //
+        function closePiaofu() {
+            //
+            document.getElementById("pf").style.display = "none";
+        }
+
+        //11
+        function checkAllItems() {
+            //1、获取到所有复选框对象
+            var items = document.getElementsByClassName("item");
+
+            //获取全选按钮是否选中
+            var isChecked = document.getElementById("checkAll").checked;
+
+            //2、循环所有获取到的复选框对象 逐条将每个复选框选择（设置属性checked=true）
+            for (var i = 0; i < items.length; i++) {     //循环条件 循环count次
+                items[i].checked = isChecked;//设置标签选中
+            }
+        }
+
+
+
+           //22
+        function checkAllItems1(checkAllElement) {
+            //1、获取到所有复选框对象
+            var items = document.getElementsByClassName("item");
+
+            //获取全选按钮是否选中
+            var isChecked = checkAllElement.checked;
+
+            //2、循环所有获取到的复选框对象 逐条将每个复选框选择（设置属性checked=true）
+            for (var i = 0; i < items.length; i++) {     //循环条件 循环count次
+                items[i].checked = isChecked;//设置标签选中
+            }
+        }
+
+
+
+
+
+
+        //333
+        //isChecked:全选按钮是否选中
+        function checkAllItems2(isChecked) {
+            //1、获取到所有复选框对象
+            var items = document.getElementsByClassName("item");
+            //2、循环所有获取到的复选框对象 逐条将每个复选框选择（设置属性checked=true）
+            for (var i = 0; i < items.length; i++) {     //循环条件 循环count次
+                items[i].checked = isChecked;//设置标签选中
+            }
+        }
+
+    </script>
+
+    true false
+</head>
+<body>
+
+
+<label onmouseover=
+               "document.getElementById('div1').style.display='block';"
+       onmouseout="document.getElementById('div1').style.display='none'">
+    <input type="checkbox"/>自动登录 </label>
+
+<div id="div1">这个是可以隐藏的
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<H2>移过来变换颜色</H2>
+<font size="4"></font>
+<span onmouseover="yanse('red')">鼠标移过来红色</span>
+<span onmouseover="yanse('blue')">鼠标移过来蓝色</span>
+<span onmouseover="yanse('yellow')">鼠标移过来黄色</span>
+<span onmouseout="yanse('#E8E8E8')">鼠标移开变成白色</span>
+
+<br>
+<br>
+
+<div id="content_items">
+    <input type="checkbox" id="checkAll" onclick="checkAllItems()"/>全选1
+    <input type="checkbox" onclick="checkAllItems1(this)"/>全选2
+    <input type="checkbox" onclick="checkAllItems2(this.checked)"/>全选3 <br/>
+    <br/>
+    <input type="checkbox" class="item"/>A <input type="checkbox" class="item"/>B
+    <input type="checkbox" class="item"/>C <input type="checkbox" class="item"/>D
+    <input type="checkbox" class="item"/>E <input type="checkbox" class="item"/>F
+</div>
+
+
+<br>
+<br>
+
+
+<div style=" position: fixed ;right:260px; top:129px; border: solid 1px red;
+     width:180px;height: 230px;z-index:1;">
+    漂浮的层,fixed定位，相对于浏览器定位
+</div>
+
+<div id="pf" style=" position:absolute ;right:16px; top:20px; border: solid 1px red;
+     width:180px;height: 70px;">
+    <a href="#" style="border:solid 1px red;width:40px; position: relative ;top:-10px;right:-138px;display: block"
+       onclick="closePiaofu()">关闭</a>
+
+    漂浮的层,absolute定位
+</div>
+
+<div style="height: 2000px;width: 2000px"></div>
+  
+</body>
+</html>
+false

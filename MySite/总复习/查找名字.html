@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>爱奇艺-新闻</title>
+    <script src="../js/jquery/jquery-1.11.2.min.js"></script>
+    <script>
+
+        var list=  [{name:"A",age:18},{name:"b",age:20},{name:"c",age:21},{name:"e",age:22},{name:"e",age:20}];
+
+        //筛选出姓名都为e的人员
+        //方法一 数组的内置filter过滤筛选
+        var newData = list.filter(function(item){
+            return item.name=="e";
+        });
+
+        //方法二
+        //新的数组
+        var newData1 = [];
+        //循环长度
+        for(var i=0;i<list.length;i++){
+            var item = list[i];
+            if(item.name=="e"){
+                //push增加
+                newData1.push(item);
+            }
+        }
+        //---------------同上-------------------------------------------
+        //方法三
+        //++++++++++++++grep字符串查找++++++++++++++++++++++++++++++++++++++=
+        //jq  第一个是赛选的数组 第二个function函数（每次的对象  每次的索引）
+        var newData2 = $.grep(list,function(item,index){
+            return item.name=="e";
+        });
+        //--------------------------------------------------------------------------
+
+
+
+
+
+        //找到年龄为20的
+        var newData11 = list.filter(function(item){
+            return item.age=="20";
+        });
+        //在第二个位置加入一个新的对象++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        var zhang = {name:"aaaaaaaaaaaaaa",age:52};
+       var newData12 =list.splice(1,0,zhang);
+
+        //修改第四个人
+        var zhang1={name:"cccc",age:53};
+        var newData13 =list.splice(3,1,zhang1);
+
+
+
+        //----------------------------------------------------------------------------------------------------------
+
+        //新问题？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+        var list001 = ["a","b","a","b","c"];
+        //找出a的个数
+        //去掉重复项
+
+        //在第二个索引位置插入一个新的人员对象
+
+        var newData14 = list001.filter(function(item){
+            return item.a;
+        });
+
+
+
+
+       //在第二个索引位置插入一个新的人员对象
+        var newData16 =list001.splice(2,0,'aaaaa');
+
+
+
+
+
+
+
+
+        //为Array新增扩展方法
+        Array.prototype.insert = function (index, item) {
+            this.splice(index, 0, item);
+            return this;
+        };
+
+        //
+        Array.prototype.remove = function (index) {
+            this.splice(index, 1);
+            return this;
+        };
+
+        //
+        Array.prototype.update = function (index,item) {
+            this.splice(index,1,item);
+            return this;
+        };
+
+        String.prototype.add =  function (a) {
+            return this + a;
+        };
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        var zhang = [
+            '漳州爆炸后附近下"黑雨" 养殖户反映海马死亡',
+            '漳州环保局长受访时"被打伞" 官方回应(图)',
+            '南京股民忘记账户密码 7年未动2万资金变14万',
+            '韩媒:黃炳誓成朝鲜"二号人物" 崔龙海或退出',
+            '落马校长:奋斗一生存不到200万 同学都是富翁',
+            '泰国一邮轮发生爆炸 船上约有16名中国游客'
+        ];
+
+       var zhang2=[
+          ' 毕福剑道歉:非常自责 行星被命名姚贝娜',
+           ' 34岁女主播烧炭身亡 王菲曝再孕霆锋返京',
+           '闫妮17岁女儿纹身照 姚笛录影遇牛车失控',
+           '  曝柳岩与男友分手内幕 胡兵日本节目炫富',
+           '  狮子与同伴抢肉头被卡 阿拉伯司机玩甩尾',
+           '  饥饿游戏：战前的寂静 大叔两次碰瓷失败',
+           '   梦娃送吉祥美德 日本山寨中国园林成废墟',
+          ' 小奶猫厨房玩乒乓球 众城管当街棍殴小贩',
+           ' 男模媲美女明星 实拍：餐盘爬出百只活蛆',
+           ' 女友雇凶欲杀男友 毛人凤刺杀毛泽东秘闻'
+
+       ];
+
+
+
+
+
+
+        function dianji () {
+
+            var html = "";
+            for (var i = 0; i < zhang.length; i++) {
+                html = html + "<li><a href='#'>" + zhang[i] + "</a></li>";
+            }
+            document.getElementById("kaishi").innerHTML = html;
+        }
+
+
+
+
+        function dianji2(){
+
+            var html="";
+            for(var a=0;a<zhang2.length;a++){
+             html=html+"<li><a href='#'>"+zhang2[a]+"</a></li>";
+                document.getElementById("kaishi").innerHTML = html;
+            }
+      }
+
+
+    </script>
+
+</head>
+<body>
+
+
+<input type="button" value="按钮1"  onmouseover="dianji()">
+
+<input type="button" value="按钮2"  onmouseover="dianji2()">
+
+<input type="button" value="按钮3">
+
+<input type="button" value="按钮4">
+
+<div style="height: 500px;width: 500px;border:1px red solid" id="kaishi" >
+
+</div>
+
+
+
+
+
+</body>
+</html>

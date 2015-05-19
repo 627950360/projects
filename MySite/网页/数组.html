@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组</title>
+
+    <script type="text/javascript">
+
+        var Suzu = new Array(1);
+        Array['安徽'] = ['阜阳', '黄山'];
+        Array['江苏'] = [ '苏州','淮安', '南京', '南通'];
+        Array['苏州']=['金阊区','高新区','工业园区','古城区'];
+        Array['淮安']=['古城区'];
+
+        function chengshi() {
+
+            //清除 所有城市   length=0
+            document.getElementById('xianshi').length = 0;
+            document.getElementById('qu').length = 0;
+
+            //获取选中的城市值
+            var zhang = document.getElementById('chensghi1').value;
+            //获取城市数组
+            var shi = Array[zhang];
+            //遍历城市
+            for (var i in shi) {
+                //取出单个城市
+                var opt = new Option(shi[i]);
+                //添加单个城市
+                document.getElementById('xianshi').options.add(opt);
+            }
+            xian();
+        }
+
+
+        function xian(){
+
+            document.getElementById('qu').length = 0;
+            var yun = document.getElementById('xianshi').value;
+            var qu = Array[yun];
+            for (var t in qu){
+                var pt = new Option(qu[t]);
+                document.getElementById('qu').options.add(pt);
+            }
+
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+<div>省份
+    <select onchange="chengshi()" id="chensghi1">
+        <option>安徽</option>
+        <option>江苏</option>
+    </select>
+</div>
+
+<div>城市
+
+    <select onchange="xian();" id="xianshi"></select>
+
+</div>
+
+
+<div>区
+
+    <select id="qu"></select>
+
+</div>
+
+
+
+
+
+</body>
+</html>
