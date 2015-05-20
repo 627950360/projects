@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../../js/jquery/jquery-1.11.2.min.js"></script>
+    <script>
+
+        var allCategoryList = {};
+        //--------------------这个是网页加载完成后启动这个函数-------------------------------------
+        $(function () {
+            //111111111加载完成后调用这个函数
+            zhang();
+            //调用加载第一级分类
+
+            //为search按钮赋点击事件
+            $("#anNiu").click(function () {
+                zhang();
+            });
+
+            function zhang() {
+
+                var shouShuo = $("#suRuKuang").val();
+                shouShuo = $.trim(shouShuo);
+                if (shouShuo == "") {
+                    alert("请输入想要的菜名才可以有结果哦！！！")
+                }
+                var url = "http://apis.juhe.cn/cook/query?key=96e775c1dc09f7324d6bb4d01f18b08a&menu=" + shouShuo + "&rn=12&pn=0";
+
+                requestData(url);
+            }
+
+            function requestData(requestUrl) {
+
+                $.ajax({
+                    url: requestUrl,
+                    type: "POST",
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (data) {
+                    $("#items").html("");
+                    var items = data.result.data;
+                    $.each(items, function (index, item) {
+                    var itemHrml = '<div class="item"><a href="detail.html?id=' + item.id + '" target="_blank"><img  src="' + item.albums[0] + '"/><span class="title">"' + item.title + '"</span><span class="tag">"' + item.tags + '"</span></a></div>';
+                    $("#items").append(itemHrml);
+                        });
+                    }
+                });
+
+            }
+
+        });
+    </script>
+    <style type="text/css">
+        body, html, * {
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            color: #444444;
+            font-family: Arial, Tahoma, sans-serif
+        }
+
+        #main {
+            width: 900px;
+            margin: auto;
+        }
+
+        #items {
+            border: solid 1px red;
+            min-height: 700px;
+
+            border: solid 1px #D8DDE3;
+        }
+
+        #items .item {
+            width: 200px;
+            height: 210px;
+            border: solid 1px #D8DDE3;
+            float: left;
+            margin: 10px
+        }
+
+        #items .item img {
+            display: block;
+            height: 150px;
+            width: 180px;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        #items .item .title {
+            text-align: center;
+            margin: 5px;
+            display: block
+        }
+
+        #items .item .tag {
+            display: block;
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 2px;
+        }
+
+        #divSearch {
+            width: 420px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #divSearch input {
+            border: solid 1px #D8DDE3;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #txtSearch {
+            width: 300px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #777777;
+        }
+
+        #btnSearch {
+            width: 80px;
+        }
+
+        .Category {
+            margin-bottom: 20px;
+            line-height: 15px;;
+        }
+
+        .Category span {
+            border: solid 1px #D8DDE3;
+
+            padding: 3px 10px 3px 10px;
+            cursor: pointer;
+            display: inline-block;
+            width: 65px;
+            margin-bottom: 2px;
+            margin-right: 2px;
+        }
+
+        .Category span:hover {
+            background-color: #FF5C00
+        }
+
+        #CategoryDetail {
+            display: none
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+
+    <div style="text-align: center">
+        <img src="../../../images/logo.jpg" style="height: 50px;width:50px;margin:auto"/>
+    </div>
+
+    <div id="divSearch">
+        <input id="suRuKuang" value="红烧肉" type="text"/>
+        <input type="button" id="anNiu" value="搜索"/>
+    </div>
+
+
+    <div id="Category" class="Category">
+    </div>
+
+    <div id="CategoryDetail" class="Category">
+
+    </div>
+
+    <div id="items">
+        <!--<div class="item">-->
+        <!--<img  src="http://img.juhe.cn/cookbook/t/1/307_874685.jpg"/>-->
+        <!--<span class="title">牛肉牛肉牛肉牛肉牛肉</span>-->
+        <!--<span class="tag">家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 </span>-->
+        <!--</div>-->
+    </div>
+
+
+</div>
+
+</body>
+</html>
